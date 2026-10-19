@@ -26,7 +26,7 @@ function initScrambleText() {
     "Engineering Lead @ Persistent Systems",
     "IBM Verify Identity Governance (IVIG)",
     "Enterprise Java & Security Specialist",
-    "PSIRT & APAR L3 Engineering Lead",
+    "PSIRT Vulnerability & APAR Lead",
     "Multi-time Bravo Award Recipient"
   ];
   let titleIdx = 0;
@@ -326,7 +326,7 @@ function renderProjects() {
         </div>
         <div class="flex items-center gap-3">
           <a href="${RESUME_DATA.personal.linkedin}" target="_blank" class="btn-cyber-outline text-xs py-1.5 px-3 w-full justify-center">
-            Discuss Architecture on LinkedIn ↗
+            LinkedIn Profile ↗
           </a>
         </div>
       </div>
@@ -383,7 +383,6 @@ function renderExperience() {
                 <h4 class="text-lg sm:text-xl font-bold text-white flex items-center gap-2.5">
                   ${exp.role}
                   ${exp.current ? '<span class="status-indicator text-[10px] py-0.5 px-2.5"><span class="pulse-dot"></span> CURRENT ROLE</span>' : ''}
-                  ${exp.awardWon ? `<span class="badge-ribbon text-[10px]">${exp.awardWon}</span>` : ''}
                 </h4>
                 <div class="text-xs font-mono text-cyan-300 mt-0.5">${exp.period} · <span class="text-gray-400">${exp.duration}</span></div>
               </div>

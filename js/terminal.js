@@ -221,11 +221,12 @@ class DeveloperTerminal {
             <span>${exp.role} @ ${exp.company}</span>
             <span class="text-emerald-400 font-mono text-[11px]">${exp.duration || ''}</span>
           </div>
-          <div class="text-gray-400">${exp.period} | ${exp.location} ${exp.awardWon ? `• <span class="text-amber-400 font-semibold">${exp.awardWon}</span>` : ''}</div>
+          <div class="text-gray-400">${exp.period} | ${exp.location}</div>
           <div class="text-cyan-300 font-semibold mt-1">Domain / Project: ${exp.project}</div>
           <div class="text-gray-300 mt-1">${exp.description}</div>
           <ul class="list-disc list-inside mt-1.5 space-y-1 text-gray-400">
             ${exp.highlights.slice(0, 3).map(h => `<li>${h}</li>`).join('')}
+          </ul>
         </div>
       `;
     });

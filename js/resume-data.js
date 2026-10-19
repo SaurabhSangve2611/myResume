@@ -18,7 +18,7 @@ const RESUME_DATA = {
     linkedin: "https://www.linkedin.com/in/saurabh-sangve-860882193/",
     github: "https://github.com",
     avatar: "assets/images/saurabh.jpg",
-    bio: "Accomplished Engineering Lead with 6+ years of enterprise software engineering experience, including over 5 years of rapid progression at Persistent Systems delivering critical releases for IBM Verify Identity Governance (IVIG) Virtual Appliance. Proven track record leading technical architecture, PSIRT security vulnerability mitigations, APAR defect triage, Request for Enhancement (RFE) implementations, and L3 mission-critical PMR engineering. Multi-time Bravo Award recipient recognized for delivery excellence, security hardening, and technical leadership across complex, high-scale identity governance systems.",
+    bio: "Accomplished Engineering Lead with 6+ years of enterprise software engineering experience, driving technical architecture, feature engineering, and security hardening for IBM Verify Identity Governance (IVIG) Virtual Appliance releases. Deep technical specialization in Core & Enterprise Java, Spring Boot, Spring MVC, Spring Data JPA, Hibernate, Microservices, and RESTful APIs with Swagger/OpenAPI. Proven record architecting and executing Request for Enhancement (RFE) features, mitigating critical PSIRT security vulnerabilities, and driving APAR defect triage across multi-release cycles. Hands-on expertise across Linux virtual appliances, enterprise application servers (IBM WebSphere, IBM Liberty, Apache Tomcat), high-concurrency databases (PostgreSQL, Oracle, IBM Db2), modern DevOps pipelines (Docker, GitHub Actions, JFrog, Azure), and AI-accelerated workflows (ChatGPT, Claude, Gemini, GitHub Copilot, IBM watsonx, IBM BOB).",
     stats: [
       { label: "Total Experience", value: "6+ Yrs" },
       { label: "Persistent Systems", value: "5+ Yrs" },
@@ -94,14 +94,22 @@ const RESUME_DATA = {
       highlights: [
         "Provide overarching technical leadership and oversight, steering design decisions, implementation strategies, and engineering best practices across agile squads.",
         "Enforce delivery excellence, robust code reviews, automated testing coverage, and strict release readiness criteria for high-stakes enterprise IAM deployments.",
-        "Core contributor and technical lead delivering IBM Verify Identity Governance (IVIG) Virtual Appliance releases supporting global Fortune 500 security footprints.",
+        "Core contributor and technical lead delivering IBM Verify Identity Governance (IVIG) Virtual Appliance releases supporting large-scale enterprise security footprints.",
         "Lead Request for Enhancement (RFE) initiatives, translating complex enterprise customer requirements into scalable, resilient product capabilities.",
         "Spearhead advanced defect triage and resolution (APARs and Development APARs), ensuring long-term product stability, zero-regression deployments, and runtime performance optimization.",
         "Direct PSIRT (Product Security Incident Response Team) initiatives, designing and delivering rapid security fixes for critical CVEs and vulnerabilities in compliance with IBM Security standards.",
-        "Provide mission-critical L3 engineering support for high-severity PMRs (Problem Management Records), conducting deep root-cause analysis under tight SLA commitments.",
-        "Drive comprehensive virtual appliance hardening, validation, and multi-release testing to guarantee enterprise-grade operational reliability."
+        "Drive comprehensive virtual appliance hardening, validation, performance benchmarking, and multi-release testing to guarantee enterprise-grade operational reliability.",
+        "Collaborate cross-functionally with architecture, security, QA, and release management to align engineering execution with technical roadmaps."
       ],
-      techStack: ["Java", "Linux", "IBM Verify Identity Governance (IVIG)", "Virtual Appliance", "PSIRT Security", "APAR Resolution", "L3 PMR Support", "REST APIs", "Git", "Security Hardening"]
+      techStack: [
+        "Java", "Spring Boot", "Spring MVC", "Spring JDBC", "Spring Data JPA", "Hibernate",
+        "Spring Security", "Spring AOP", "RESTful APIs", "Microservices", "Swagger/OpenAPI",
+        "PostgreSQL", "Oracle Database", "IBM Db2", "Maven", "Gradle", "Git", "GitHub",
+        "IBM WebSphere Application Server (Traditional)", "IBM Liberty", "Apache Tomcat",
+        "Microsoft Azure", "Docker", "GitHub Actions", "JFrog Artifactory", "Travis CI",
+        "Linux", "Windows", "HTML", "CSS", "JavaScript",
+        "ChatGPT", "Claude", "Gemini", "GitHub Copilot", "IBM watsonx", "IBM BOB"
+      ]
     },
     {
       company: "Persistent Systems",
@@ -117,12 +125,19 @@ const RESUME_DATA = {
       highlights: [
         "Delivered core product features for new IBM Verify Identity Governance Virtual Appliance (IVIG VA) and ISVG VA releases.",
         "Designed and implemented high-priority Request for Enhancement (RFE) features, boosting appliance throughput and governance functionality.",
-        "Conducted root-cause analysis on complex APARs and Development APARs, maintaining product stability across global client installations.",
+        "Conducted root-cause analysis on complex APARs and Development APARs, maintaining product stability across global enterprise client installations.",
         "Contributed high-priority PSIRT vulnerability remediations, ensuring adherence to rigorous IBM security standards.",
-        "Delivered L3 customer support for urgent PMRs, diagnosing edge-case production anomalies and issuing interim fixpacks.",
+        "Authored and validated interim fixpack releases, eliminating critical runtime defects under tight release timelines.",
         "Led product hardening, performance benchmarking, and end-to-end regression testing across multiple release cycles."
       ],
-      techStack: ["Core Java", "Java EE", "Linux", "IVIG VA", "ISVG VA", "PSIRT", "APARs", "PMR L3", "Fixpacks", "Interim Fixes"]
+      techStack: [
+        "Java", "Spring Boot", "Spring MVC", "Spring JDBC", "Spring Data JPA", "Hibernate",
+        "Spring Security", "Spring AOP", "RESTful APIs", "Microservices", "Swagger/OpenAPI",
+        "PostgreSQL", "Oracle Database", "IBM Db2", "Maven", "Gradle", "Git", "GitHub",
+        "IBM WebSphere Application Server (Traditional)", "IBM Liberty", "Apache Tomcat",
+        "Microsoft Azure", "Docker", "GitHub Actions", "JFrog Artifactory", "Travis CI",
+        "Linux", "Windows", "HTML", "CSS", "JavaScript"
+      ]
     },
     {
       company: "Persistent Systems",
@@ -134,17 +149,22 @@ const RESUME_DATA = {
       employmentType: "Full-time",
       project: "IBM Security and Verify Governance (IGIVA / ISVGVA)",
       current: false,
-      awardWon: "🏆 Bravo Award Recipient",
       description: "Drove code enhancements, security fixes, and defect engineering for IBM Security and Verify Governance Virtual Appliance.",
       highlights: [
-        "Honored with the prestigious Bravo Award for exceptional contributions to IBM Security and Verify Governance product stability.",
-        "Executed core code enhancements across ISVG VA backend subsystems.",
-        "Resolved critical APARs and Development APARs with zero regression rates.",
-        "Engineered rapid-response PSIRT fixes to mitigate high-vulnerability security threats.",
-        "Managed L3 PMR support queues, packaging and delivering official fixpacks and interim fixpacks under tight timelines.",
-        "Collaborated seamlessly across globally distributed engineering, QA, and security teams."
+        "Executed core code enhancements across ISVG VA backend subsystems using Java, Spring, and database persistence layers.",
+        "Resolved critical APARs and Development APARs with zero regression rates across release branches.",
+        "Engineered rapid-response PSIRT fixes to mitigate high-vulnerability security threats in enterprise identity repositories.",
+        "Packaged, verified, and delivered official fixpacks and interim fix distributions under stringent quality standards.",
+        "Collaborated seamlessly across globally distributed engineering, QA, and security squads to accelerate release velocity."
       ],
-      techStack: ["Java", "Web Services APIs", "IGIVA / ISVGVA", "Security Fixes", "Fixpack Packaging", "APAR Triage", "Linux"]
+      techStack: [
+        "Java", "Spring Boot", "Spring MVC", "Spring JDBC", "Spring Data JPA", "Hibernate",
+        "Spring Security", "Spring AOP", "RESTful APIs", "Microservices", "Swagger/OpenAPI",
+        "PostgreSQL", "Oracle Database", "IBM Db2", "Maven", "Gradle", "Git", "GitHub",
+        "IBM WebSphere Application Server (Traditional)", "IBM Liberty", "Apache Tomcat",
+        "Microsoft Azure", "Docker", "GitHub Actions", "JFrog Artifactory", "Travis CI",
+        "Linux", "Windows", "HTML", "CSS", "JavaScript"
+      ]
     },
     {
       company: "Persistent Systems",
@@ -156,16 +176,21 @@ const RESUME_DATA = {
       employmentType: "Full-time",
       project: "IBM Security and Verify Governance (IGIVA / ISVGVA)",
       current: false,
-      awardWon: "🏆 Bravo Award Recipient",
-      description: "Spearheaded defect fixes, RFE code implementations, and L3 support for the IGIVA/ISVGVA product suite.",
+      description: "Spearheaded defect fixes, RFE code implementations, and virtual appliance enhancements for the IGIVA/ISVGVA product suite.",
       highlights: [
-        "Earned Bravo Award recognition for outstanding dedication, rapid bug resolution, and high-quality deliverables.",
-        "Implemented code enhancements in ISVG VA to support customer feature requests.",
-        "Diagnosed and resolved critical APAR defects in core Java modules.",
+        "Implemented robust code enhancements in ISVG VA to support customer feature requests and optimized application performance.",
+        "Diagnosed and resolved critical APAR defects in core Java modules with extensive unit testing.",
         "Contributed to PSIRT security vulnerability fixes, securing sensitive identity governance pipelines.",
-        "Packaged and validated fixpacks and interim patch releases for enterprise customer accounts."
+        "Packaged and validated fixpacks and interim patch releases for enterprise deployments."
       ],
-      techStack: ["Java", "C++", "IGIVA / ISVGVA", "APARs", "PSIRT", "PMR Cases", "Defect Testing"]
+      techStack: [
+        "Java", "Spring Boot", "Spring MVC", "Spring JDBC", "Spring Data JPA", "Hibernate",
+        "Spring Security", "Spring AOP", "RESTful APIs", "Microservices", "Swagger/OpenAPI",
+        "PostgreSQL", "Oracle Database", "IBM Db2", "Maven", "Gradle", "Git", "GitHub",
+        "IBM WebSphere Application Server (Traditional)", "IBM Liberty", "Apache Tomcat",
+        "Microsoft Azure", "Docker", "GitHub Actions", "JFrog Artifactory", "Travis CI",
+        "Linux", "Windows", "HTML", "CSS", "JavaScript"
+      ]
     },
     {
       company: "BluCor Systems Pvt. Ltd.",
@@ -191,18 +216,18 @@ const RESUME_DATA = {
   projects: [
     {
       title: "IBM Verify Identity Governance (IVIG) Virtual Appliance",
-      type: "Enterprise Security Flagship",
+      type: "Enterprise Application",
       institution: "Persistent Systems / IBM Security",
       role: "Engineering Lead / Lead Software Engineer",
-      badge: "Enterprise Flagship",
+      badge: "Enterprise Application",
       featured: true,
-      summary: "Next-generation Virtual Appliance powering enterprise Identity & Access Governance, role lifecycle management, compliance enforcement, and access certification for global Fortune 500 customers.",
+      summary: "Next-generation Virtual Appliance powering enterprise Identity & Access Governance, role lifecycle management, compliance enforcement, and access certification for large-scale enterprise deployments.",
       highlights: [
         "Lead technical delivery of IVIG VA releases, guiding architecture, code quality, and security hardening.",
         "Architect and implement major Request for Enhancement (RFE) features to optimize governance workflows.",
         "Resolve high-priority APARs and Development APARs, eliminating core defects and preventing regressions.",
         "Direct PSIRT vulnerability remediations complying with rigorous IBM Product Security standards.",
-        "Provide tier-1 L3 PMR engineering support for mission-critical client incidents."
+        "Spearhead virtual appliance hardening, end-to-end integration validation, and performance benchmarking."
       ],
       techStack: ["Java", "Linux", "Virtual Appliance OS", "IVIG VA", "PSIRT Security", "APAR Resolution", "Fixpacks", "REST APIs"],
       links: {
@@ -212,17 +237,17 @@ const RESUME_DATA = {
     },
     {
       title: "IBM Security and Verify Governance (ISVG VA / IGIVA)",
-      type: "Commercial Security Platform",
+      type: "Enterprise Application",
       institution: "Persistent Systems / IBM Security",
       role: "Senior Software Engineer / Software Engineer",
-      badge: "Bravo Awarded",
+      badge: "Enterprise Application",
       featured: true,
-      summary: "Comprehensive identity governance suite for auditing, segregation of duties (SoD), and user access lifecycle. Honored with multiple Bravo Awards for technical delivery excellence and security fixes.",
+      summary: "Mission-critical enterprise identity governance application for auditing, segregation of duties (SoD), access certification, and user access lifecycle management across distributed infrastructure.",
       highlights: [
-        "Awarded multiple Bravo Awards for delivering high-impact code enhancements and defect resolutions.",
-        "Engineered critical PSIRT fixes mitigating vulnerabilities in enterprise identity repositories.",
-        "Diagnosed complex L3 PMRs and authored official fixpacks and interim fix distributions.",
-        "Streamlined defect testing pipelines and maintained high customer satisfaction ratings."
+        "Delivered core code enhancements and feature modules across ISVG VA backend subsystems using Java and Spring.",
+        "Engineered critical PSIRT fixes mitigating security vulnerabilities in enterprise identity repositories.",
+        "Diagnosed complex product defects (APARs) and authored official fixpacks and interim fix distributions.",
+        "Streamlined automated test suites and validation pipelines to ensure enterprise release quality."
       ],
       techStack: ["Java", "Web Services", "ISVG VA", "IGIVA", "Security Patching", "Linux", "MySQL / DB2"],
       links: {
@@ -299,12 +324,12 @@ const RESUME_DATA = {
     },
     {
       id: "bravo-pmr",
-      title: "Bravo Award #3 — Mission-Critical L3 Support & Customer Delight (PMRs)",
+      title: "Bravo Award #3 — Mission-Critical Production Engineering & PMR Resolution",
       issuer: "Persistent Systems · Client Engineering",
       date: "Senior Software Engineer",
       badge: "🏆 Bravo Award #3",
       category: "Bravo Honors",
-      citation: "“Recognized with the Bravo Award for exemplary L3 customer engineering support, resolving high-severity production PMRs and delivering timely Interim Fixpacks under tight turnaround limits.”",
+      citation: "“Recognized with the Bravo Award for exemplary customer engineering support, resolving high-severity production PMRs and delivering timely Interim Fixpacks under tight turnaround limits.”",
       reactions: { likes: 182, comments: 42, shares: 18 },
       verified: true,
       details: "Conducted live forensic debugging on client clusters, restoring normal operations and receiving written commendation from enterprise accounts.",
