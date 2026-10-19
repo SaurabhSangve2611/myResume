@@ -1,0 +1,165 @@
+/**
+ * Executive ATS & Print Friendly Stylesheet
+ * Automatically transforms the futuristic digital resume into a pristine,
+ * ATS-compliant 1-2 page executive resume when printing or saving as PDF!
+ */
+
+@media print {
+  /* Hide unnecessary interactive web widgets */
+  #cyber-canvas,
+  .scanlines-overlay,
+  .cyber-nav,
+  #terminal-modal,
+  #award-modal,
+  #toast-notification,
+  .audio-toggle-btn,
+  .terminal-toggle-btn,
+  .filter-bar,
+  .interactive-only,
+  .btn-cyber-primary,
+  .btn-cyber-outline,
+  .social-reactions,
+  .hud-corner-tl,
+  .hud-corner-br,
+  footer {
+    display: none !important;
+  }
+
+  /* Reset layout for paper */
+  body {
+    background: #ffffff !important;
+    color: #111827 !important;
+    font-family: 'Helvetica Neue', Arial, sans-serif !important;
+    font-size: 10pt !important;
+    line-height: 1.4 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .container,
+  main,
+  section {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Executive Header */
+  .resume-print-header {
+    display: block !important;
+    border-bottom: 2px solid #0f172a;
+    padding-bottom: 12px;
+    margin-bottom: 16px;
+  }
+
+  .resume-print-header h1 {
+    font-size: 20pt !important;
+    font-weight: bold;
+    color: #0f172a !important;
+    margin: 0 0 4px 0;
+    text-transform: uppercase;
+  }
+
+  .resume-print-header .subtitle {
+    font-size: 11pt !important;
+    color: #334155 !important;
+    font-weight: 600;
+  }
+
+  .resume-print-header .contact-row {
+    font-size: 9pt !important;
+    color: #475569 !important;
+    margin-top: 6px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  /* Section Styling */
+  .print-section {
+    margin-bottom: 14px;
+    page-break-inside: avoid;
+  }
+
+  .print-section-title {
+    font-size: 11pt !important;
+    font-weight: bold !important;
+    text-transform: uppercase;
+    color: #0f172a !important;
+    border-bottom: 1.5px solid #cbd5e1;
+    padding-bottom: 2px;
+    margin-bottom: 8px;
+    letter-spacing: 0.05em;
+  }
+
+  /* Card styling flattened */
+  .hud-card,
+  .award-card {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin-bottom: 10px !important;
+  }
+
+  .hud-card::before {
+    display: none !important;
+  }
+
+  /* Experience & Projects layout */
+  .experience-item,
+  .project-item {
+    margin-bottom: 10px;
+    page-break-inside: avoid;
+  }
+
+  .role-title {
+    font-weight: bold;
+    color: #0f172a;
+    font-size: 10pt;
+  }
+
+  .company-meta {
+    font-size: 8.5pt;
+    color: #475569;
+    margin-bottom: 4px;
+  }
+
+  ul {
+    margin: 4px 0 6px 18px !important;
+    padding: 0 !important;
+  }
+
+  li {
+    margin-bottom: 2px !important;
+    font-size: 9pt !important;
+    color: #334155 !important;
+  }
+
+  /* Skills grid in print */
+  .skills-print-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 6px !important;
+  }
+
+  .skill-print-group {
+    font-size: 8.5pt !important;
+  }
+
+  .skill-print-group strong {
+    color: #0f172a;
+  }
+
+  /* Page setup */
+  @page {
+    size: A4 portrait;
+    margin: 1.2cm 1.5cm;
+  }
+
+  a {
+    color: #0284c7 !important;
+    text-decoration: none !important;
+  }
+}

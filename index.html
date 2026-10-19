@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saurabh Ajit Sangve | Software Developer Portfolio & Digital Resume</title>
+  
+  <!-- SEO & Social Meta -->
+  <meta name="description" content="Digital Resume and Developer Portfolio of Saurabh Ajit Sangve — Software Developer specializing in Java, Spring Boot, React.js, Hibernate/JPA, and Microservices.">
+  <meta name="keywords" content="Saurabh Sangve, Software Developer, Java Developer, Spring Boot, React, CDAC DAC, Pune Developer, Bravo Awards">
+  <meta property="og:title" content="Saurabh Ajit Sangve | Digital Resume & Developer Portfolio">
+  <meta property="og:description" content="Explore my projects, core skills, and Bravo awards. Built for GitHub Pages.">
+  <meta property="og:type" content="website">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cyber: {
+              cyan: '#00f5ff',
+              purple: '#9d4edd',
+              emerald: '#10b981',
+              amber: '#f59e0b',
+              dark: '#070913',
+              card: '#0d1124'
+            }
+          },
+          fontFamily: {
+            mono: ['JetBrains Mono', 'monospace'],
+            heading: ['Space Grotesk', 'sans-serif'],
+            body: ['Inter', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom Futuristic Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/print.css" media="print">
+</head>
+<body class="relative text-slate-100 antialiased selection:bg-cyan-500 selection:text-black">
+
+  <!-- Background WebGL/Canvas Particle Constellation & Scanlines -->
+  <canvas id="cyber-canvas"></canvas>
+  <div class="scanlines-overlay"></div>
+
+  <!-- ATS & PRINT ONLY EXECUTIVE RESUME HEADER (Only visible when printing or exporting to PDF) -->
+  <header class="resume-print-header hidden">
+    <h1>Saurabh Ajit Sangve</h1>
+    <div class="subtitle">Software Developer — Full Stack Java, Spring Boot & React.js</div>
+    <div class="contact-row">
+      <span>📧 saurabhsangve05@gmail.com</span>
+      <span>📱 +91 7057323228</span>
+      <span>📍 Pune, Maharashtra, India</span>
+      <span>🌐 linkedin.com/in/saurabh-sangve-860882193</span>
+    </div>
+  </header>
+
+  <!-- Futuristic Floating HUD Navigation Bar -->
+  <nav class="cyber-nav flex items-center justify-between">
+    <a href="#hero" class="flex items-center gap-2 font-mono font-bold text-sm tracking-widest text-cyan-400 hover:text-white transition-colors">
+      <span class="text-xs px-2 py-0.5 rounded bg-cyan-950 border border-cyan-800 text-cyan-300">SAS</span>
+      <span>// DEV.SYS</span>
+    </a>
+
+    <!-- Nav Links -->
+    <div class="hidden lg:flex items-center gap-6 text-xs font-mono text-gray-300">
+      <a href="#hero" class="hover:text-cyan-400 transition-colors">Overview</a>
+      <a href="#awards" class="hover:text-amber-400 text-amber-300 flex items-center gap-1 font-semibold transition-colors">
+        <span>🏆 Bravo Awards</span>
+      </a>
+      <a href="#skills" class="hover:text-cyan-400 transition-colors">Tech Stack</a>
+      <a href="#projects" class="hover:text-cyan-400 transition-colors">Projects</a>
+      <a href="#experience" class="hover:text-cyan-400 transition-colors">Experience</a>
+      <a href="#education" class="hover:text-cyan-400 transition-colors">Education</a>
+    </div>
+
+    <!-- HUD Action Controls -->
+    <div class="flex items-center gap-2.5">
+      <!-- Audio Toggle Button -->
+      <button id="audio-toggle-btn" class="audio-toggle-btn p-2 rounded-lg bg-slate-900/80 border border-slate-700/60 text-xs font-mono flex items-center gap-1.5 hover:border-cyan-400 transition-all text-gray-400" title="Toggle Futuristic Sound Effects">
+        <span class="sound-bars" style="display:none;">
+          <span></span><span></span><span></span><span></span>
+        </span>
+        <span id="audio-status-text">SFX: OFF</span>
+      </button>
+
+      <!-- Terminal Launcher Button -->
+      <button onclick="window.terminal.toggle()" class="terminal-toggle-btn px-2.5 py-1.5 rounded-lg bg-cyan-950/60 border border-cyan-500/40 text-cyan-400 hover:bg-cyan-900/60 text-xs font-mono font-semibold flex items-center gap-1.5 transition-all shadow-[0_0_12px_rgba(0,245,255,0.2)]" title="Press ` key or click to open Developer CLI">
+        <span>&gt;_</span>
+        <span class="hidden sm:inline">CLI (~)</span>
+      </button>
+
+      <!-- Print / Export PDF Resume Button -->
+      <button onclick="window.print()" class="px-2.5 py-1.5 rounded-lg bg-purple-950/60 border border-purple-500/40 text-purple-300 hover:bg-purple-900/60 text-xs font-mono font-semibold flex items-center gap-1.5 transition-all" title="Export Clean ATS PDF Resume">
+        <span>📄</span>
+        <span class="hidden sm:inline">Print CV</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Main Content Container -->
+  <main class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 pt-28 pb-20">
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section id="hero" class="mb-24 pt-4 sm:pt-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        
+        <!-- Left Column: Bio & Core Info -->
+        <div class="lg:col-span-7 space-y-6">
+          <!-- Availability Status Indicator -->
+          <div class="status-indicator">
+            <span class="pulse-dot"></span>
+            <span>AVAILABLE FOR OPPORTUNITIES • PUNE, INDIA</span>
+          </div>
+
+          <!-- Hero Name & Scramble Tagline -->
+          <div>
+            <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight font-heading text-white drop-shadow-[0_2px_15px_rgba(0,245,255,0.25)]">
+              Saurabh Ajit <span class="bg-gradient-to-r from-cyan-400 via-teal-300 to-purple-400 bg-clip-text text-transparent">Sangve</span>
+            </h1>
+            <div class="text-lg sm:text-2xl font-mono text-cyan-300 font-semibold mt-2 flex items-center gap-2">
+              <span class="text-purple-400 font-mono">&gt;</span>
+              <span id="scramble-subtitle">Full Stack Software Developer</span>
+            </div>
+          </div>
+
+          <!-- Professional Bio Summary -->
+          <p class="text-sm sm:text-base text-gray-300 leading-relaxed max-w-2xl font-normal">
+            Detail-oriented Software Developer with hands-on expertise building robust, scalable web architectures. 
+            Skilled in <strong class="text-white">Java, Spring Boot, Hibernate/JPA, REST APIs</strong>, and modern 
+            <strong class="text-white">React.js</strong> single-page applications. CDAC DAC alumnus with proven track record 
+            in agile product delivery, code optimization, and recognized with multiple <strong class="text-amber-300">Bravo Awards</strong> for excellence in software execution.
+          </p>
+
+          <!-- Contact Coordinates with 1-Click Copy -->
+          <div class="flex flex-wrap gap-2.5 pt-1 text-xs font-mono">
+            <button onclick="copyToClipboard('saurabhsangve05@gmail.com', 'Email')" class="px-3 py-1.5 rounded-lg bg-slate-900/80 border border-slate-700/80 hover:border-cyan-400 flex items-center gap-2 text-gray-300 hover:text-white transition-all">
+              <span class="text-cyan-400">📧</span> saurabhsangve05@gmail.com
+              <span class="text-[10px] text-gray-500 font-normal">[Copy]</span>
+            </button>
+            <button onclick="copyToClipboard('+917057323228', 'Phone')" class="px-3 py-1.5 rounded-lg bg-slate-900/80 border border-slate-700/80 hover:border-cyan-400 flex items-center gap-2 text-gray-300 hover:text-white transition-all">
+              <span class="text-emerald-400">📱</span> +91 7057323228
+              <span class="text-[10px] text-gray-500 font-normal">[Copy]</span>
+            </button>
+            <span class="px-3 py-1.5 rounded-lg bg-slate-900/80 border border-slate-700/80 flex items-center gap-2 text-gray-400">
+              <span class="text-purple-400">📍</span> Pune, Maharashtra
+            </span>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="flex flex-wrap gap-4 pt-2">
+            <a href="#awards" class="btn-cyber-primary">
+              <span>🏆 Explore Bravo Awards</span>
+            </a>
+            <a href="https://www.linkedin.com/in/saurabh-sangve-860882193/" target="_blank" class="btn-cyber-outline">
+              <span>LinkedIn Profile ↗</span>
+            </a>
+            <button onclick="window.terminal.open()" class="btn-cyber-outline text-purple-300 border-purple-500/40 hover:border-purple-400">
+              <span>&gt;_ Launch Terminal</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Column: High-Tech Holographic Avatar Card -->
+        <div class="lg:col-span-5 flex flex-col items-center justify-center">
+          <div class="hud-card p-6 w-full max-w-sm text-center relative">
+            <div class="hud-corner-tl"></div>
+            <div class="hud-corner-br"></div>
+
+            <!-- Avatar with Cyber Rings -->
+            <div class="avatar-container mb-5">
+              <div class="avatar-ring-outer"></div>
+              <div class="avatar-ring"></div>
+              <img src="assets/images/saurabh.jpg" alt="Saurabh Ajit Sangve" class="avatar-img" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1534972195531-a756b1129f63?auto=format&fit=crop&w=400&q=80';">
+            </div>
+
+            <!-- Profile Info in Card -->
+            <h3 class="text-lg font-bold text-white font-heading">Saurabh Sangve</h3>
+            <div class="text-xs font-mono text-cyan-400 mb-3">CDAC DAC | Full Stack Engineer</div>
+
+            <!-- Floating Tech Chips -->
+            <div class="flex flex-wrap justify-center gap-1.5">
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-cyan-950/60 border border-cyan-800 text-cyan-300">Java EE / 17+</span>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-purple-950/60 border border-purple-800 text-purple-300">Spring Boot</span>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-950/60 border border-emerald-800 text-emerald-300">Hibernate/JPA</span>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-amber-950/60 border border-amber-800 text-amber-300">React.js</span>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-800 border border-slate-700 text-gray-300">MySQL</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Stats HUD Grid -->
+      <div id="hero-stats-grid" class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
+        <!-- Rendered dynamically by main.js -->
+      </div>
+    </section>
+
+    <!-- ==================== DEDICATED BRAVO AWARDS & RECOGNITIONS ==================== -->
+    <section id="awards" class="mb-24 scroll-mt-24">
+      <div class="flex flex-wrap items-end justify-between gap-4 mb-8">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-mono font-semibold mb-2">
+            <span>⭐ HALL OF FAME</span>
+            <span>•</span>
+            <span>LINKEDIN & INDUSTRY RECOGNITION</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white">
+            Bravo Awards & Accolades
+          </h2>
+          <p class="text-xs sm:text-sm text-gray-400 mt-1 max-w-xl">
+            Spotlighting official Bravo awards, client commendations, technical credentials, and engineering achievements.
+          </p>
+        </div>
+
+        <!-- Awards Filter Tabs -->
+        <div class="flex flex-wrap gap-2">
+          <button class="filter-btn award-filter-btn active" data-category="all" onclick="filterAwards('all')">All Honors</button>
+          <button class="filter-btn award-filter-btn" data-category="bravo" onclick="filterAwards('bravo')">🏆 Bravo Awards</button>
+          <button class="filter-btn award-filter-btn" data-category="certifications" onclick="filterAwards('certifications')">📜 Certifications</button>
+          <button class="filter-btn award-filter-btn" data-category="hackathons" onclick="filterAwards('hackathons')">🤖 Competitions</button>
+        </div>
+      </div>
+
+      <!-- Awards Cards Grid -->
+      <div id="awards-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Rendered dynamically by main.js -->
+      </div>
+
+      <!-- LinkedIn Post Verification Banner -->
+      <div class="hud-card p-6 mt-6 flex flex-wrap items-center justify-between gap-4 border-amber-500/30 bg-gradient-to-r from-amber-950/20 via-slate-900/60 to-purple-950/20">
+        <div class="flex items-center gap-3">
+          <div class="p-3 rounded-xl bg-amber-500/20 text-amber-300 text-2xl border border-amber-500/40">
+            ⭐
+          </div>
+          <div>
+            <h4 class="text-sm font-bold text-white">Have more Bravo awards or LinkedIn posts to spotlight?</h4>
+            <p class="text-xs text-gray-400">All recognitions are configured in <code class="text-cyan-300 font-mono">js/resume-data.js</code> and easily updated with screenshots or citations.</p>
+          </div>
+        </div>
+        <a href="https://www.linkedin.com/in/saurabh-sangve-860882193/" target="_blank" class="btn-cyber-primary text-xs py-2 px-4">
+          Open LinkedIn Profile ↗
+        </a>
+      </div>
+    </section>
+
+    <!-- ==================== TECHNICAL SKILLS & RADAR ==================== -->
+    <section id="skills" class="mb-24 scroll-mt-24">
+      <div class="flex flex-wrap items-end justify-between gap-4 mb-8">
+        <div>
+          <span class="text-cyan-400 font-mono text-xs font-semibold tracking-wider uppercase">// CORE CAPABILITIES</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white">
+            Technical Skill Matrix
+          </h2>
+          <p class="text-xs sm:text-sm text-gray-400 mt-1">
+            Engineered with deep focus on enterprise Java backends, relational databases, and clean modern web interfaces.
+          </p>
+        </div>
+
+        <!-- Skill Filter Tabs -->
+        <div class="flex flex-wrap gap-2">
+          <button class="filter-btn skill-filter-btn active" data-category="all" onclick="filterSkills('all')">All Skills</button>
+          <button class="filter-btn skill-filter-btn" data-category="backend" onclick="filterSkills('backend')">Backend & Java</button>
+          <button class="filter-btn skill-filter-btn" data-category="frontend" onclick="filterSkills('frontend')">Frontend & UI</button>
+          <button class="filter-btn skill-filter-btn" data-category="databases" onclick="filterSkills('databases')">Databases</button>
+          <button class="filter-btn skill-filter-btn" data-category="devops" onclick="filterSkills('devops')">Tools & DevOps</button>
+        </div>
+      </div>
+
+      <!-- Skills Grid -->
+      <div id="skills-container" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Rendered dynamically by main.js -->
+      </div>
+    </section>
+
+    <!-- ==================== FLAGSHIP PROJECTS ==================== -->
+    <section id="projects" class="mb-24 scroll-mt-24">
+      <div class="mb-8">
+        <span class="text-purple-400 font-mono text-xs font-semibold tracking-wider uppercase">// PORTFOLIO OF WORK</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white">
+          Featured & Flagship Projects
+        </h2>
+        <p class="text-xs sm:text-sm text-gray-400 mt-1 max-w-2xl">
+          Architectural highlights ranging from CDAC DAC's E-Pariksha online examination portal to commercial food ordering platforms.
+        </p>
+      </div>
+
+      <!-- Projects Grid -->
+      <div id="projects-container" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Rendered dynamically by main.js -->
+      </div>
+    </section>
+
+    <!-- ==================== PROFESSIONAL WORK EXPERIENCE ==================== -->
+    <section id="experience" class="mb-24 scroll-mt-24">
+      <div class="mb-8">
+        <span class="text-emerald-400 font-mono text-xs font-semibold tracking-wider uppercase">// CAREER TRAJECTORY</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white">
+          Work Experience
+        </h2>
+        <p class="text-xs sm:text-sm text-gray-400 mt-1">
+          Hands-on software development in client-facing environments.
+        </p>
+      </div>
+
+      <div id="experience-container" class="space-y-6">
+        <!-- Rendered dynamically by main.js -->
+      </div>
+    </section>
+
+    <!-- ==================== EDUCATION & CERTIFICATIONS ==================== -->
+    <section id="education" class="mb-24 scroll-mt-24">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        <!-- Education Column -->
+        <div class="lg:col-span-7">
+          <div class="mb-6">
+            <span class="text-cyan-400 font-mono text-xs font-semibold tracking-wider uppercase">// ACADEMIC FOUNDATIONS</span>
+            <h2 class="text-2xl sm:text-3xl font-extrabold font-heading text-white">
+              Education & Qualifications
+            </h2>
+          </div>
+          <div id="education-container" class="space-y-4">
+            <!-- Rendered dynamically by main.js -->
+          </div>
+        </div>
+
+        <!-- Certifications Column -->
+        <div class="lg:col-span-5">
+          <div class="mb-6">
+            <span class="text-amber-400 font-mono text-xs font-semibold tracking-wider uppercase">// VALIDATED CREDENTIALS</span>
+            <h2 class="text-2xl sm:text-3xl font-extrabold font-heading text-white">
+              Certifications & Training
+            </h2>
+          </div>
+          <div id="certifications-container" class="space-y-3">
+            <!-- Rendered dynamically by main.js -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== HIRE / CONTACT HOLODECK ==================== -->
+    <section id="contact" class="hud-card p-8 sm:p-12 text-center relative overflow-hidden bg-gradient-to-b from-cyan-950/20 via-slate-900/80 to-purple-950/30">
+      <div class="hud-corner-tl"></div>
+      <div class="hud-corner-br"></div>
+
+      <div class="max-w-2xl mx-auto space-y-5">
+        <span class="text-xs font-mono text-cyan-400 bg-cyan-950/60 px-3 py-1 rounded-full border border-cyan-800">
+          🚀 LET'S BUILD SOMETHING EXTRAORDINARY
+        </span>
+        <h2 class="text-3xl sm:text-5xl font-extrabold font-heading text-white">
+          Ready to Connect?
+        </h2>
+        <p class="text-xs sm:text-sm text-gray-300 leading-relaxed">
+          I am actively exploring Software Developer opportunities where I can apply my expertise in Java, Spring Boot, React, and database engineering. Let's discuss how I can contribute to your team's success.
+        </p>
+
+        <!-- Direct Actions -->
+        <div class="flex flex-wrap items-center justify-center gap-3 pt-3">
+          <a href="mailto:saurabhsangve05@gmail.com" class="btn-cyber-primary">
+            <span>✉️ Send Direct Email</span>
+          </a>
+          <button onclick="copyToClipboard('+917057323228', 'Phone Number')" class="btn-cyber-outline">
+            <span>📞 Call / WhatsApp</span>
+          </button>
+          <a href="https://www.linkedin.com/in/saurabh-sangve-860882193/" target="_blank" class="btn-cyber-outline text-amber-300 border-amber-500/40 hover:border-amber-400">
+            <span>Connect on LinkedIn ↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="relative z-10 border-t border-slate-800/80 bg-slate-950/80 py-8 text-center text-xs font-mono text-gray-500">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div>
+        © 2026 Saurabh Ajit Sangve. Built with passion & hosted on <span class="text-cyan-400">GitHub Pages</span>.
+      </div>
+      <div class="flex items-center gap-4 text-gray-400">
+        <button onclick="window.terminal.open()" class="hover:text-cyan-400">Dev Terminal</button>
+        <span>•</span>
+        <button onclick="window.print()" class="hover:text-cyan-400">Print / ATS Resume</button>
+        <span>•</span>
+        <a href="https://www.linkedin.com/in/saurabh-sangve-860882193/" target="_blank" class="hover:text-cyan-400">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== INTERACTIVE DEVELOPER TERMINAL MODAL ==================== -->
+  <div id="terminal-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4">
+    <div class="w-full max-w-3xl glass-modal rounded-xl overflow-hidden flex flex-col h-[520px] border border-cyan-500/40 shadow-[0_0_50px_rgba(0,245,255,0.2)]">
+      
+      <!-- Terminal Header / Titlebar -->
+      <div class="bg-slate-900/90 px-4 py-2.5 border-b border-cyan-500/30 flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <div class="w-3 h-3 rounded-full bg-rose-500 cursor-pointer" onclick="window.terminal.close()"></div>
+          <div class="w-3 h-3 rounded-full bg-amber-500"></div>
+          <div class="w-3 h-3 rounded-full bg-emerald-500"></div>
+          <span class="text-xs font-mono text-gray-400 ml-2">saurabh@dev-machine: ~ (zsh)</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="text-[10px] font-mono text-gray-400 hidden sm:inline">Press ` or ESC to close</span>
+          <button onclick="window.terminal.close()" class="text-gray-400 hover:text-white text-xs font-mono px-2 py-0.5 rounded hover:bg-slate-800">✕</button>
+        </div>
+      </div>
+
+      <!-- Terminal Output Buffer -->
+      <div id="terminal-output" class="flex-1 p-4 overflow-y-auto font-mono text-xs text-gray-200 space-y-1">
+        <div class="text-cyan-400 font-bold mb-1">
+          ╔══════════════════════════════════════════════════════════════╗<br>
+          ║   SAURABH AJIT SANGVE // INTERACTIVE DEVELOPER CONSOLE v2.6   ║<br>
+          ╚══════════════════════════════════════════════════════════════╝
+        </div>
+        <div class="text-gray-400 mb-2">Type <span class="text-yellow-400 font-bold">help</span> to view available terminal commands, or try <span class="text-cyan-300">awards</span>, <span class="text-cyan-300">skills</span>, <span class="text-cyan-300">projects</span>, <span class="text-cyan-300">whoami</span>.</div>
+      </div>
+
+      <!-- Terminal Input Line -->
+      <div class="p-3 bg-slate-950 border-t border-cyan-500/30 flex items-center gap-2">
+        <span class="text-cyan-400 font-mono text-xs font-bold">saurabh@dev:~$</span>
+        <input id="terminal-input" type="text" autocomplete="off" spellcheck="false" class="flex-1 bg-transparent text-white font-mono text-xs outline-none border-none placeholder-gray-600" placeholder="Type a command (e.g. help, skills, awards, contact)...">
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== AWARD CELEBRATION MODAL ==================== -->
+  <div id="award-modal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md hidden items-center justify-center p-4">
+    <div class="w-full max-w-xl glass-modal rounded-2xl overflow-hidden p-6 sm:p-8 relative border border-amber-500/40 shadow-[0_0_60px_rgba(245,158,11,0.25)]">
+      <!-- Close Button -->
+      <button onclick="closeAwardModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white p-2 rounded-lg bg-slate-900 border border-slate-700 text-xs font-mono">
+        ✕ ESC
+      </button>
+
+      <!-- Dynamic Award Content -->
+      <div id="award-modal-content">
+        <!-- Rendered dynamically by main.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== FLOATING TOAST NOTIFICATION ==================== -->
+  <div id="toast-notification" class="hud-card px-4 py-3 rounded-lg border-cyan-400/50 bg-slate-900/95 flex items-center gap-2.5 shadow-[0_0_20px_rgba(0,245,255,0.3)]">
+    <span class="text-cyan-400 font-bold">⚡</span>
+    <span id="toast-message" class="text-xs font-mono text-white">Notification message</span>
+  </div>
+
+  <!-- Script Modules -->
+  <script src="js/resume-data.js"></script>
+  <script src="js/sound-effects.js"></script>
+  <script src="js/canvas-bg.js"></script>
+  <script src="js/terminal.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
