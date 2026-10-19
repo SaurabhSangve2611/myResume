@@ -162,9 +162,6 @@ function renderAwards(category) {
       <div>
         <div class="flex items-center justify-between mb-3">
           <span class="badge-ribbon">${a.badge}</span>
-          <span class="text-xs font-mono text-amber-300/80 bg-amber-950/40 px-2.5 py-1 rounded border border-amber-500/30">
-            ${a.date}
-          </span>
         </div>
 
         ${a.image ? `
@@ -290,9 +287,6 @@ function renderAchievements() {
         <div class="flex items-center justify-between mb-3">
           <span class="text-xs font-mono font-bold px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
             ${ach.badge}
-          </span>
-          <span class="text-[11px] font-mono text-cyan-300 bg-slate-950/80 px-2 py-0.5 rounded border border-slate-700">
-            ${ach.category}
           </span>
         </div>
 
@@ -434,7 +428,6 @@ function renderProjects() {
           <span class="text-xs font-mono font-semibold px-2.5 py-1 rounded-full ${p.featured ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/30' : 'bg-slate-800 text-gray-300 border border-slate-700'}">
             ${p.badge}
           </span>
-          <span class="text-xs font-mono text-gray-400">${p.type}</span>
         </div>
 
         <h3 class="text-xl font-bold text-white mb-1">${p.title}</h3>
