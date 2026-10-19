@@ -178,7 +178,7 @@ class DeveloperTerminal {
   }
 
   cmdAwards() {
-    let out = `<div class="text-amber-400 font-semibold mb-2">🏆 Bravo Awards & Professional Recognitions:</div>`;
+    let out = `<div class="text-amber-400 font-semibold mb-2">🏆 Bravo Awards (7x Recipient @ Persistent Systems) & Accolades:</div>`;
     RESUME_DATA.awards.forEach((aw, idx) => {
       out += `
         <div class="p-2.5 my-1.5 bg-yellow-950/20 border-l-4 border-amber-400 rounded-r text-xs">
