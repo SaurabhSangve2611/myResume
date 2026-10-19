@@ -168,7 +168,7 @@ function renderAwards(category) {
         </div>
 
         ${a.image ? `
-          <div class="relative w-full h-44 rounded-lg overflow-hidden border border-amber-500/20 mb-4 bg-slate-950 group/img">
+          <div class="relative w-full h-44 rounded-lg overflow-hidden border border-amber-500/20 mb-4 bg-slate-950 group/img" onclick="event.stopPropagation(); window.openImageLightbox('${a.image}', '${a.title.replace(/'/g, "\\'")}')">
             <img src="${a.image}" alt="${a.title}" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover/img:scale-105" loading="lazy">
             <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent flex items-end justify-between p-2.5">
               <span class="text-[10px] font-mono text-cyan-300 flex items-center gap-1 bg-black/80 px-2 py-0.5 rounded border border-cyan-800/40 backdrop-blur">
@@ -197,14 +197,17 @@ function renderAwards(category) {
         </p>
       </div>
 
-      <div class="pt-3 border-t border-amber-500/20 flex items-center justify-between text-xs text-gray-400">
+      <div class="pt-3 border-t border-amber-500/20 flex flex-wrap items-center justify-between gap-2 text-xs text-gray-400">
         <div class="flex items-center gap-3">
           <span class="flex items-center gap-1 text-cyan-300">👍 ${a.reactions.likes}</span>
           <span class="flex items-center gap-1 text-purple-300">💬 ${a.reactions.comments}</span>
         </div>
-        <button class="text-amber-400 hover:text-amber-300 font-mono font-semibold flex items-center gap-1 text-xs">
-          View Award & Photo ↗
-        </button>
+        <div class="flex items-center gap-2">
+          ${a.postUrl ? `<a href="${a.postUrl}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()" class="text-amber-400 hover:text-amber-300 font-mono font-semibold flex items-center gap-1 text-xs">Post ↗</a>` : ''}
+          <button class="text-cyan-400 hover:text-cyan-300 font-mono font-semibold flex items-center gap-1 text-xs">
+            View Award 🔍
+          </button>
+        </div>
       </div>
     </div>
   `).join('');
@@ -262,8 +265,8 @@ window.viewAwardModal = function(awardId) {
         <span>💬 ${award.reactions.comments} Comments</span>
         <span>🔄 ${award.reactions.shares || 8} Reposts</span>
       </div>
-      <a href="${RESUME_DATA.personal.linkedin}" target="_blank" class="btn-cyber-primary text-xs py-2 px-4">
-        Verify on LinkedIn Profile ↗
+      <a href="${award.postUrl || RESUME_DATA.personal.linkedin}" target="_blank" rel="noopener noreferrer" class="btn-cyber-primary text-xs py-2 px-4">
+        Verify on LinkedIn ↗
       </a>
     </div>
   `;
