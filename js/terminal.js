@@ -162,13 +162,19 @@ class DeveloperTerminal {
 
   cmdSkills() {
     let out = `<div class="text-cyan-300 font-semibold mb-2">🛠️ Technical Skill Matrix:</div>`;
+    out += `
+      <div class="p-2 mb-3 bg-cyan-950/40 border border-cyan-800/60 rounded">
+        <div class="text-yellow-300 font-bold text-xs mb-1">⚡ PRIMARY SKILLS (Core Pillars):</div>
+        <div class="text-emerald-400 font-mono text-xs">${RESUME_DATA.personal.primarySkills.join(' • ')}</div>
+      </div>
+    `;
     RESUME_DATA.skills.forEach(cat => {
       out += `<div class="text-xs text-purple-400 font-bold mt-2 uppercase tracking-wider">${cat.category}</div>`;
       cat.skills.forEach(s => {
         const barLength = Math.round(s.level / 5);
         const bar = '█'.repeat(barLength) + '░'.repeat(20 - barLength);
         out += `<div class="text-xs font-mono flex justify-between py-0.5">
-          <span class="text-gray-200 w-44">${s.name}</span>
+          <span class="text-gray-200 w-52">${s.name}</span>
           <span class="text-emerald-400 hidden sm:inline">[${bar}]</span>
           <span class="text-cyan-400 font-semibold">${s.level}%</span>
         </div>`;

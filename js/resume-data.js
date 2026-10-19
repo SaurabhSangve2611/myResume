@@ -24,44 +24,57 @@ const RESUME_DATA = {
       { label: "Persistent Systems", value: "5+ Yrs" },
       { label: "Career Progression", value: "4 Tiers" },
       { label: "Bravo Awards Won", value: "7x Recipient" }
+    ],
+    primarySkills: [
+      "Java",
+      "Spring Boot",
+      "Hibernate",
+      "Spring Data JPA",
+      "RESTful APIs",
+      "Microservices",
+      "Docker",
+      "Linux"
     ]
   },
 
   skills: [
     {
-      category: "Enterprise IAM & Systems",
+      category: "Spring Ecosystem & Java Frameworks",
       skills: [
-        { name: "IBM Verify Identity Governance (IVIG)", level: 95, icon: "shield", tags: ["Virtual Appliance", "ISVG", "IGIVA", "Identity Governance", "Access Management"] },
-        { name: "PSIRT & Product Security", level: 92, icon: "lock", tags: ["Vulnerability Remediation", "Security Hardening", "IBM Security Standards", "CVE Patching"] },
-        { name: "Defect Triage & Engineering (APAR/PMR)", level: 95, icon: "tool", tags: ["L3 Customer Support", "APARs", "Development APARs", "Fixpacks", "Interim Fixes"] },
-        { name: "Linux & Virtual Appliance OS", level: 90, icon: "terminal", tags: ["Shell Scripting", "Hardening", "Appliance Lifecycle", "Deployment"] }
+        { name: "Java (Core & Advanced)", level: 96, icon: "coffee", tags: ["OOP", "Multithreading", "Streams", "Collections", "Concurrency", "JVM Profiling"] },
+        { name: "Spring Boot & Microservices", level: 95, icon: "feather", tags: ["Microservice Architecture", "Spring MVC", "Spring Security", "Spring AOP", "Spring JDBC"] },
+        { name: "Hibernate & Spring Data JPA", level: 93, icon: "database", tags: ["ORM", "Entity Mappings", "Criteria Queries", "Transaction Management", "JPA Repository"] },
+        { name: "RESTful APIs & Swagger/OpenAPI", level: 94, icon: "server", tags: ["API Design", "OpenAPI Spec", "Contract Testing", "REST Endpoints", "JSON/XML"] },
+        { name: "Servlets, JSP & Thymeleaf", level: 88, icon: "layout", tags: ["Thymeleaf Templates", "Java Servlets", "JSP", "MVC Architecture", "Session Handling"] }
       ]
     },
     {
-      category: "Core Backend & Frameworks",
+      category: "DevOps, Cloud Platforms & App Servers",
       skills: [
-        { name: "Java (Core & Advanced / EE)", level: 95, icon: "coffee", tags: ["Multithreading", "Concurrency", "OOP", "Collections", "Streams", "Memory Profiling"] },
-        { name: "Spring Boot & Microservices", level: 90, icon: "feather", tags: ["RESTful APIs", "Spring Security", "Actuator", "Dependency Injection"] },
-        { name: "Hibernate / JPA", level: 88, icon: "database", tags: ["ORM", "Entity Mappings", "Transaction Management", "HQL"] },
-        { name: "Web Services & APIs", level: 90, icon: "server", tags: ["REST APIs", "SOAP/XML", "JSON", "Service Integrations"] },
-        { name: "C / C++", level: 78, icon: "cpu", tags: ["Data Structures", "System Programming", "Pointers"] }
+        { name: "Docker & Containerization", level: 92, icon: "box", tags: ["Dockerfiles", "Container Lifecycle", "Microservice Deployment", "Docker Compose"] },
+        { name: "Linux & Virtual Appliance OS", level: 94, icon: "terminal", tags: ["Enterprise Linux", "Shell Scripting", "Appliance Hardening", "System Diagnostics", "Windows"] },
+        { name: "Cloud Platforms: Microsoft Azure", level: 84, icon: "cloud", tags: ["Azure VMs", "Cloud Services", "IAM Integration", "Cloud Deployment"] },
+        { name: "DevOps & CI/CD Pipelines", level: 88, icon: "git-branch", tags: ["GitHub Actions", "JFrog Artifactory", "Travis CI", "Automated Pipelines"] },
+        { name: "Application Servers", level: 92, icon: "server", tags: ["IBM WebSphere Application Server (Traditional)", "IBM Liberty", "Apache Tomcat"] },
+        { name: "Build Tools: Maven & Gradle", level: 90, icon: "tool", tags: ["POM Management", "Multi-module Builds", "Dependency Resolution", "Gradle Scripts"] }
       ]
     },
     {
-      category: "Frontend & Full Stack",
+      category: "Databases & Storage Architecture",
       skills: [
-        { name: "React.js", level: 82, icon: "code", tags: ["Components", "Hooks", "SPA Architecture", "State Management"] },
-        { name: "JavaScript (ES6+) & HTML5/CSS3", level: 88, icon: "layout", tags: ["Async/Await", "DOM", "Bootstrap", "Tailwind", "Responsive UI"] },
-        { name: "Thymeleaf & Servlets/JSP", level: 85, icon: "layers", tags: ["Server Templates", "MVC Architecture", "Session Management"] }
+        { name: "PostgreSQL", level: 92, icon: "database", tags: ["ACID Compliance", "Indexing", "Complex Queries", "JSONB", "Performance Tuning"] },
+        { name: "MySQL", level: 93, icon: "database", tags: ["Schema Design", "Query Optimization", "Stored Procedures", "Transactions"] },
+        { name: "Oracle Database", level: 88, icon: "database", tags: ["PL/SQL", "Relational Modeling", "Enterprise Schemas", "Constraints"] },
+        { name: "IBM Db2 & H2 In-Memory", level: 86, icon: "disc", tags: ["IBM Db2 Enterprise", "H2 In-Memory DB", "Testing Databases", "Data Migration"] }
       ]
     },
     {
-      category: "Databases & DevOps Tools",
+      category: "AI Tools, Testing & Front-End",
       skills: [
-        { name: "Relational DBs (MySQL, Oracle, DB2)", level: 88, icon: "hard-drive", tags: ["Query Optimization", "Complex Joins", "Schema Design", "Transactions"] },
-        { name: "Git, GitHub & Version Control", level: 92, icon: "git-branch", tags: ["Branching Strategy", "PR Reviews", "Release Tagging", "CI/CD"] },
-        { name: "Application Servers", level: 88, icon: "server", tags: ["Apache Tomcat", "WebSphere", "Virtual Appliance Packaging"] },
-        { name: "IDE & Tooling", level: 92, icon: "tool", tags: ["Eclipse", "VS Code", "STS", "Postman", "Defect Tracking Tools"] }
+        { name: "AI Acceleration & LLM Tools", level: 95, icon: "zap", tags: ["ChatGPT", "Claude", "Gemini", "GitHub Copilot", "IBM watsonx", "IBM BOB"] },
+        { name: "Version Control: Git & GitHub", level: 94, icon: "git-branch", tags: ["Branching Workflows", "PR Reviews", "Release Tagging", "Git Hygiene"] },
+        { name: "Testing: JUnit", level: 90, icon: "check-circle", tags: ["Unit Testing", "Test-Driven Development", "Mocking", "Regression Suites"] },
+        { name: "Front-End Technologies", level: 85, icon: "code", tags: ["HTML", "CSS", "JavaScript", "Responsive UI", "DOM Manipulation"] }
       ]
     }
   ],
