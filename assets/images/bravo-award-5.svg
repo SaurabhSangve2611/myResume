@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070c1a"/>
+      <stop offset="50%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#050813"/>
+    </linearGradient>
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="25%" stop-color="#00f5ff"/>
+      <stop offset="75%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#9d4edd"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="50%" stop-color="#fef08a"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f5ff"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="620" fill="url(#bgGrad)"/>
+
+  <!-- Outer Double Border with Gradient -->
+  <rect x="20" y="20" width="860" height="580" rx="16" fill="none" stroke="url(#borderGrad)" stroke-width="2.5" opacity="0.85"/>
+  <rect x="32" y="32" width="836" height="556" rx="12" fill="none" stroke="#f59e0b" stroke-width="1" stroke-dasharray="6,4" opacity="0.4"/>
+
+  <!-- Tech Corner Decors -->
+  <path d="M 20 50 L 50 20 M 20 65 L 65 20" stroke="#00f5ff" stroke-width="2" opacity="0.6"/>
+  <path d="M 880 50 L 850 20 M 880 65 L 835 20" stroke="#f59e0b" stroke-width="2" opacity="0.6"/>
+  <path d="M 20 570 L 50 600 M 20 555 L 65 600" stroke="#f59e0b" stroke-width="2" opacity="0.6"/>
+  <path d="M 880 570 L 850 600 M 880 555 L 835 600" stroke="#00f5ff" stroke-width="2" opacity="0.6"/>
+
+  <!-- Brand Header -->
+  <g transform="translate(60, 60)">
+    <!-- Persistent Orange Infinity Logo Icon -->
+    <path d="M12 24 C12 18, 18 14, 24 14 C30 14, 34 18, 38 24 C42 30, 46 34, 52 34 C58 34, 64 30, 64 24 C64 18, 58 14, 52 14 C46 14, 42 18, 38 24 C34 30, 30 34, 24 34 C18 34, 12 30, 12 24 Z" fill="none" stroke="#f97316" stroke-width="4.5" stroke-linecap="round"/>
+    <text x="75" y="28" font-family="'Inter', sans-serif" font-size="20" font-weight="800" fill="#ffffff" letter-spacing="1.5">Persistent</text>
+    <text x="75" y="44" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" fill="#00f5ff" letter-spacing="2">PRODUCT ENGINEERING &amp; IBM SECURITY</text>
+  </g>
+
+  <!-- Award Badge Header Pill -->
+  <g transform="translate(560, 60)">
+    <rect width="280" height="38" rx="19" fill="#f59e0b" fill-opacity="0.15" stroke="#f59e0b" stroke-width="1.5"/>
+    <circle cx="24" cy="19" r="8" fill="#f59e0b"/>
+    <text x="40" y="24" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700" fill="#fbbf24" letter-spacing="1.5">⭐ BRAVO AWARD #5</text>
+  </g>
+
+  <!-- Medallion Center Graphic -->
+  <g transform="translate(450, 160)" text-anchor="middle">
+    <!-- Starburst Glow -->
+    <circle cx="0" cy="0" r="42" fill="#f59e0b" fill-opacity="0.12" filter="url(#glow)"/>
+    <circle cx="0" cy="0" r="32" fill="#1e293b" stroke="#f59e0b" stroke-width="2.5"/>
+    <text x="0" y="10" font-size="28">🏆</text>
+  </g>
+
+  <!-- Certificate Heading -->
+  <text x="450" y="235" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="700" fill="#00f5ff" letter-spacing="5">CERTIFICATE OF RECOGNITION</text>
+  <text x="450" y="265" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-size="24" font-weight="800" fill="#ffffff" letter-spacing="1">BRAVO EXCELLENCE AWARD</text>
+  <line x1="320" y1="280" x2="580" y2="280" stroke="#f59e0b" stroke-width="1.5" opacity="0.6"/>
+
+  <!-- Presented To -->
+  <text x="450" y="315" text-anchor="middle" font-family="'Inter', sans-serif" font-size="12" fill="#94a3b8" letter-spacing="2">THIS PRESTIGIOUS HONOR IS CONFERRED UPON</text>
+  <text x="450" y="360" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-size="34" font-weight="900" fill="url(#goldGrad)" letter-spacing="1">SAURABH SANGVE</text>
+
+  <!-- Citation / Description Box -->
+  <g transform="translate(100, 385)">
+    <rect width="700" height="110" rx="10" fill="#030712" fill-opacity="0.75" stroke="#334155" stroke-width="1"/>
+    <!-- Award Specific Title -->
+    <text x="350" y="30" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-size="16" font-weight="700" fill="#38bdf8">Multi-Release Virtual Appliance Hardening</text>
+    <text x="350" y="50" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" fill="#f59e0b" letter-spacing="1">PLATFORM HARDENING & SECURITY COMPLIANCE</text>
+    <!-- Citation Text -->
+    <text x="350" y="80" text-anchor="middle" font-family="'Inter', sans-serif" font-size="12" fill="#cbd5e1" font-style="italic">
+      "Conferred for engineering end-to-end appliance hardening, OS validation, and performance opt..."
+    </text>
+  </g>
+
+  <!-- Verification Seals & Signatures -->
+  <g transform="translate(120, 535)">
+    <line x1="0" y1="0" x2="180" y2="0" stroke="#475569" stroke-width="1"/>
+    <text x="90" y="18" text-anchor="middle" font-family="'Inter', sans-serif" font-size="11" font-weight="600" fill="#94a3b8">Engineering Leadership</text>
+    <text x="90" y="32" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#00f5ff">Persistent Systems</text>
+  </g>
+
+  <!-- Digital Stamp Seal Center -->
+  <g transform="translate(450, 545)" text-anchor="middle">
+    <circle cx="0" cy="0" r="28" fill="#f59e0b" fill-opacity="0.1" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="3,2"/>
+    <text x="0" y="-4" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="800" fill="#fbbf24">VERIFIED</text>
+    <text x="0" y="8" font-family="'JetBrains Mono', monospace" font-size="7" font-weight="600" fill="#38bdf8">HONOR</text>
+    <text x="0" y="18" font-size="8">⭐</text>
+  </g>
+
+  <g transform="translate(600, 535)">
+    <line x1="0" y1="0" x2="180" y2="0" stroke="#475569" stroke-width="1"/>
+    <text x="90" y="18" text-anchor="middle" font-family="'Inter', sans-serif" font-size="11" font-weight="600" fill="#94a3b8">Delivery Excellence</text>
+    <text x="90" y="32" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#f59e0b">IBM Security Program</text>
+  </g>
+</svg>

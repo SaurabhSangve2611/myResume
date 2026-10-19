@@ -74,7 +74,10 @@
     <div class="hidden lg:flex items-center gap-6 text-xs font-mono text-gray-300">
       <a href="#hero" class="hover:text-cyan-400 transition-colors">Overview</a>
       <a href="#awards" class="hover:text-amber-400 text-amber-300 flex items-center gap-1 font-semibold transition-colors">
-        <span>🏆 Bravo Awards</span>
+        <span>🏆 Awards</span>
+      </a>
+      <a href="#achievements" class="hover:text-emerald-400 text-emerald-300 flex items-center gap-1 font-semibold transition-colors">
+        <span>⭐ Achievements</span>
       </a>
       <a href="#skills" class="hover:text-cyan-400 transition-colors">Tech Stack</a>
       <a href="#projects" class="hover:text-cyan-400 transition-colors">Projects</a>
@@ -157,7 +160,10 @@
           <!-- Action Buttons -->
           <div class="flex flex-wrap gap-4 pt-2">
             <a href="#awards" class="btn-cyber-primary">
-              <span>🏆 Explore Bravo Awards</span>
+              <span>🏆 Explore Awards</span>
+            </a>
+            <a href="#achievements" class="btn-cyber-outline text-emerald-300 border-emerald-500/40 hover:border-emerald-400">
+              <span>⭐ Key Achievements</span>
             </a>
             <a href="https://www.linkedin.com/in/saurabh-sangve-860882193/" target="_blank" class="btn-cyber-outline">
               <span>LinkedIn Profile ↗</span>
@@ -207,27 +213,27 @@
       </div>
     </section>
 
-    <!-- ==================== DEDICATED BRAVO AWARDS & RECOGNITIONS ==================== -->
+    <!-- ==================== AWARDS & RECOGNITIONS ==================== -->
     <section id="awards" class="mb-24 scroll-mt-24">
       <div class="flex flex-wrap items-end justify-between gap-4 mb-8">
         <div>
           <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-mono font-semibold mb-2">
-            <span>⭐ 7X BRAVO AWARD RECIPIENT</span>
+            <span>⭐ AWARDS & HONORS RECIPIENT</span>
             <span>•</span>
             <span>PERSISTENT SYSTEMS & IBM SECURITY</span>
           </div>
           <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white">
-            Bravo Awards & Accolades (7 Honors)
+            Awards & Accolades
           </h2>
           <p class="text-xs sm:text-sm text-gray-400 mt-1 max-w-xl">
-            Spotlighting all 7 official Bravo Awards conferred at Persistent Systems for PSIRT vulnerability remediations, APAR defect triage, critical production issue resolution, and engineering excellence on IBM Verify Identity Governance.
+            Spotlighting official Persistent Systems Excellence in Delivery and Bravo Awards for PSIRT vulnerability remediations, APAR defect triage, critical production issue resolution, and engineering leadership on IBM Verify Identity Governance.
           </p>
         </div>
 
         <!-- Awards Filter Tabs -->
         <div class="flex flex-wrap gap-2">
-          <button class="filter-btn award-filter-btn active" data-category="all" onclick="filterAwards('all')">All Honors (11)</button>
-          <button class="filter-btn award-filter-btn" data-category="bravo" onclick="filterAwards('bravo')">🏆 Bravo Awards (7)</button>
+          <button class="filter-btn award-filter-btn active" data-category="all" onclick="filterAwards('all')">All Honors (12)</button>
+          <button class="filter-btn award-filter-btn" data-category="awards" onclick="filterAwards('awards')">🏆 Awards (8)</button>
           <button class="filter-btn award-filter-btn" data-category="certifications" onclick="filterAwards('certifications')">📜 Certifications</button>
           <button class="filter-btn award-filter-btn" data-category="leadership" onclick="filterAwards('leadership')">⭐ Leadership</button>
         </div>
@@ -245,13 +251,42 @@
             ⭐
           </div>
           <div>
-            <h4 class="text-sm font-bold text-white">Have more Bravo awards or LinkedIn posts to spotlight?</h4>
-            <p class="text-xs text-gray-400">All recognitions are configured in <code class="text-cyan-300 font-mono">js/resume-data.js</code> and easily updated with screenshots or citations.</p>
+            <h4 class="text-sm font-bold text-white">Official Recognitions & Verified Credentials</h4>
+            <p class="text-xs text-gray-400">All honors feature verified citations, photography, certificates, and company leadership commendations.</p>
           </div>
         </div>
         <a href="https://www.linkedin.com/in/saurabh-sangve-860882193/" target="_blank" class="btn-cyber-primary text-xs py-2 px-4">
           Open LinkedIn Profile ↗
         </a>
+      </div>
+    </section>
+
+    <!-- ==================== KEY ACHIEVEMENTS & HIGHLIGHTS ==================== -->
+    <section id="achievements" class="mb-24 scroll-mt-24">
+      <div class="flex flex-wrap items-end justify-between gap-4 mb-8">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-xs font-mono font-semibold mb-2">
+            <span>⭐ KEY ACHIEVEMENTS</span>
+            <span>•</span>
+            <span>HACKATHONS, TALENT & PRODUCTION DELIVERY</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white">
+            Key Achievements & Highlights
+          </h2>
+          <p class="text-xs sm:text-sm text-gray-400 mt-1 max-w-2xl">
+            Verified publications and honors from Persistent Systems flagship hackathons, executive talent councils, and project delivery awards with real photography and certificates.
+          </p>
+        </div>
+
+        <div class="text-xs font-mono text-cyan-300 bg-slate-900/80 px-3 py-1.5 rounded-lg border border-slate-700/80 flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+          <span>Verified LinkedIn Publications</span>
+        </div>
+      </div>
+
+      <!-- Achievements Cards Grid -->
+      <div id="achievements-container" class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <!-- Rendered dynamically by main.js -->
       </div>
     </section>
 
@@ -497,6 +532,19 @@
       <div id="award-modal-content">
         <!-- Rendered dynamically by main.js -->
       </div>
+    </div>
+  </div>
+
+  <!-- ==================== HIGH-RES IMAGE & CERTIFICATE LIGHTBOX MODAL ==================== -->
+  <div id="image-lightbox-modal" class="fixed inset-0 z-50 bg-black/95 backdrop-blur-md hidden items-center justify-center p-4 sm:p-6" onclick="if(event.target === this) window.closeImageLightbox()">
+    <div class="relative max-w-4xl w-full flex flex-col items-center">
+      <button onclick="window.closeImageLightbox()" class="absolute -top-12 right-0 text-gray-300 hover:text-white p-2 rounded-lg bg-slate-900 border border-slate-700 text-xs font-mono flex items-center gap-1.5 transition-colors">
+        <span>✕ Close (ESC)</span>
+      </button>
+      <div class="w-full rounded-2xl overflow-hidden border border-cyan-500/40 bg-slate-950 p-2 shadow-[0_0_60px_rgba(0,245,255,0.25)]">
+        <img id="lightbox-img" src="" alt="Certificate / Award Photograph" class="w-full max-h-[75vh] object-contain rounded-xl mx-auto">
+      </div>
+      <div id="lightbox-caption" class="text-xs font-mono text-cyan-300 mt-3 text-center max-w-2xl px-4 py-1.5 rounded-full bg-slate-900/80 border border-cyan-800/40"></div>
     </div>
   </div>
 

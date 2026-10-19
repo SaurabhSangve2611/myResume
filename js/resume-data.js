@@ -23,7 +23,7 @@ const RESUME_DATA = {
       { label: "Total Experience", value: "6+ Yrs" },
       { label: "Persistent Systems", value: "5+ Yrs" },
       { label: "Career Progression", value: "4 Tiers" },
-      { label: "Bravo Awards Won", value: "7x Recipient" }
+      { label: "Awards & Honors", value: "8+ Honors" }
     ],
     primarySkills: [
       "Java",
@@ -297,15 +297,39 @@ const RESUME_DATA = {
 
   awards: [
     {
+      id: "excellence-in-delivery-award",
+      title: "Excellence in Delivery Award — Team Awards 2025",
+      issuer: "Persistent Systems Leadership & Product Engineering",
+      date: "Persistent Team Awards FY2025",
+      badge: "🏆 Excellence in Delivery",
+      category: "Awards",
+      citation: "“For demonstrating exceptional commitment to quality and timely delivery, setting a benchmark for excellence, and contributing significantly to project success.”",
+      reactions: { likes: 146, comments: 10, shares: 8 },
+      verified: true,
+      image: "assets/images/post-excellence-delivery-1.jpg",
+      trophyImage: "assets/images/post-excellence-delivery-2.jpg",
+      gallery: [
+        "assets/images/post-excellence-delivery-1.jpg",
+        "assets/images/post-excellence-delivery-2.jpg",
+        "assets/images/post-excellence-delivery-3.jpg",
+        "assets/images/post-excellence-delivery-4.jpg",
+        "assets/images/post-excellence-delivery-5.jpg",
+        "assets/images/post-excellence-delivery-6.jpg"
+      ],
+      details: "Presented on stage by Persistent Systems executive leadership with official crystal trophy in recognition of outstanding quality, rigorous delivery commitment, and project milestone success.",
+      icon: "award"
+    },
+    {
       id: "bravo-psirt",
       title: "Bravo Award #1 — PSIRT Critical Vulnerability Remediation",
       issuer: "Persistent Systems & IBM Security Leadership",
       date: "Engineering Lead / Lead SE",
       badge: "🏆 Bravo Award #1",
-      category: "Bravo Honors",
+      category: "Awards",
       citation: "“Conferred for rapid response and flawless remediation of high-severity CVE product security vulnerabilities within IBM Verify Identity Governance, ensuring compliance with global enterprise security benchmarks.”",
       reactions: { likes: 174, comments: 38, shares: 16 },
       verified: true,
+      image: "assets/images/bravo-award-1.svg",
       details: "Led the emergency security response, isolated vulnerable components, authored patches, and completed release regression testing ahead of SLA deadlines.",
       icon: "shield"
     },
@@ -315,10 +339,11 @@ const RESUME_DATA = {
       issuer: "Persistent Systems · Product Engineering",
       date: "Lead Software Engineer",
       badge: "🏆 Bravo Award #2",
-      category: "Bravo Honors",
+      category: "Awards",
       citation: "“Awarded for exceptional analytical rigor in dissecting and eliminating persistent APAR defects and Development Work Items, preventing critical regressions across customer environments.”",
       reactions: { likes: 156, comments: 29, shares: 12 },
       verified: true,
+      image: "assets/images/bravo-award-2.svg",
       details: "Diagnosed deep architectural edge-cases in core Java and appliance runtime modules, delivering clean, performant fixes across global client clusters.",
       icon: "tool"
     },
@@ -328,10 +353,11 @@ const RESUME_DATA = {
       issuer: "Persistent Systems · Client Engineering",
       date: "Senior Software Engineer",
       badge: "🏆 Bravo Award #3",
-      category: "Bravo Honors",
+      category: "Awards",
       citation: "“Recognized with the Bravo Award for exemplary customer engineering support, resolving high-severity production PMRs and delivering timely Interim Fixpacks under tight turnaround limits.”",
       reactions: { likes: 182, comments: 42, shares: 18 },
       verified: true,
+      image: "assets/images/bravo-award-3.svg",
       details: "Conducted live forensic debugging on client clusters, restoring normal operations and receiving written commendation from enterprise accounts.",
       icon: "zap"
     },
@@ -341,10 +367,11 @@ const RESUME_DATA = {
       issuer: "Persistent Systems · IBM Verify Identity Governance",
       date: "Senior Software Engineer",
       badge: "🏆 Bravo Award #4",
-      category: "Bravo Honors",
+      category: "Awards",
       citation: "“Honored for driving the design and execution of high-priority Request for Enhancement (RFE) features, significantly augmenting identity lifecycle governance capabilities.”",
       reactions: { likes: 139, comments: 24, shares: 8 },
       verified: true,
+      image: "assets/images/bravo-award-4.svg",
       details: "Successfully translated complex business specifications into scalable Java services, expanding the core product footprint.",
       icon: "layers"
     },
@@ -354,10 +381,11 @@ const RESUME_DATA = {
       issuer: "Persistent Systems · Quality & Release Engineering",
       date: "Senior Software Engineer",
       badge: "🏆 Bravo Award #5",
-      category: "Bravo Honors",
+      category: "Awards",
       citation: "“Presented for outstanding technical ownership during virtual appliance hardening, end-to-end integration validation, and zero-defect release packaging.”",
       reactions: { likes: 148, comments: 27, shares: 11 },
       verified: true,
+      image: "assets/images/bravo-award-5.svg",
       details: "Streamlined appliance validation test suites, automated repetitive smoke checks, and boosted release readiness predictability.",
       icon: "cpu"
     },
@@ -367,10 +395,11 @@ const RESUME_DATA = {
       issuer: "Persistent Systems · Engineering Operations",
       date: "Software Engineer",
       badge: "🏆 Bravo Award #6",
-      category: "Bravo Honors",
+      category: "Awards",
       citation: "“Awarded for proactive code enhancements in ISVG VA, optimizing database query transactions and thread execution profiles for high-concurrency enterprise workloads.”",
       reactions: { likes: 162, comments: 31, shares: 14 },
       verified: true,
+      image: "assets/images/bravo-award-6.svg",
       details: "Pinpointed memory leaks and synchronization bottlenecks in Java subsystems, yielding measurable latency improvements.",
       icon: "trending-up"
     },
@@ -380,10 +409,11 @@ const RESUME_DATA = {
       issuer: "Persistent Systems · Agile Squad Leadership",
       date: "Software Engineer",
       badge: "🏆 Bravo Award #7",
-      category: "Bravo Honors",
+      category: "Awards",
       citation: "“Recognized for exemplary teamwork, active participation in sprint code reviews, mentoring peer developers in Java best practices, and driving consistent milestone delivery.”",
       reactions: { likes: 125, comments: 22, shares: 7 },
       verified: true,
+      image: "assets/images/bravo-award-7.svg",
       details: "Exemplified Persistent Systems' engineering values, promoting knowledge transfer, team velocity, and clean code standards.",
       icon: "users"
     },
@@ -397,6 +427,7 @@ const RESUME_DATA = {
       citation: "“Advanced from Software Engineer to Senior Software Engineer, Lead Software Engineer, and Engineering Lead in recognition of sustained technical excellence and leadership across IBM Verify Identity Governance releases.”",
       reactions: { likes: 230, comments: 48, shares: 22 },
       verified: true,
+      image: "assets/images/saurabh.jpg",
       details: "Reflects 5+ continuous years of increasing architectural ownership, team leadership, cross-functional alignment, and product security leadership.",
       icon: "award"
     },
@@ -438,6 +469,71 @@ const RESUME_DATA = {
       verified: true,
       details: "Deep dive into enterprise Java frameworks, object-oriented principles, and database-driven software applications.",
       icon: "check-circle"
+    }
+  ],
+
+  achievements: [
+    {
+      id: "semicolons-2026",
+      title: "Persistent Systems Flagship Hackathon — Semicolons 2026",
+      subtitle: "Certificate of Participation • Team \"Saiki K\"",
+      category: "Innovation & AI",
+      badge: "🚀 Semicolons 2026",
+      image: "assets/images/post-semicolons-2026.jpg",
+      postUrl: "https://lnkd.in/p/dvyUFUvG",
+      reactions: { likes: 15, comments: 2 },
+      description: `🚀 Excited to share that I participated in Semicolons 2026, the flagship hackathon by Persistent Systems, and received a participation certificate! 🎉
+
+Our team "Saiki K" designed an AI-powered Website Knowledge Assistant that continuously crawls website content, builds a live knowledge graph, and enables users to interact with website information through natural conversations. By leveraging semantic search and Retrieval-Augmented Generation (RAG), the solution delivers accurate, context-aware, and source-grounded responses while automatically staying up to date as website content evolves.
+
+It was a great experience collaborating with an amazing team, turning an idea into a working solution, and exploring how AI can solve real-world challenges.
+Grateful to Persistent Systems for organizing such an inspiring platform to innovate, collaborate, and learn. Looking forward to many more such opportunities!`,
+      tags: ["#Semicolons2026", "#PersistentSystems", "#AI", "#GenerativeAI", "#KnowledgeGraph", "#RAG", "#Hackathon", "#Innovation", "#Teamwork", "#Learning"]
+    },
+    {
+      id: "top-talent-2026",
+      title: "Identified as Top Talent FY2026 at Persistent Systems",
+      subtitle: "Conferred by Rajiv Naithani, Chief People Officer",
+      category: "Leadership & Recognition",
+      badge: "🌟 Top Talent FY2026",
+      image: "assets/images/post-toptalent-2026.jpg",
+      postUrl: "https://lnkd.in/p/daTHcSKD",
+      reactions: { likes: 112, comments: 14 },
+      description: `Honored and grateful to be recognized as Top Talent at Persistent Systems.
+
+This achievement means a lot to me, especially after years of continuous learning, dedication, and giving my best in every responsibility entrusted to me.
+A sincere thank you to my manager and team for their support, guidance, and trust throughout this journey. Your encouragement has played a huge role in my growth.
+Looking forward to continuing to learn, contribute, and take on new challenges ahead.
+
+Persistent Systems #TopTalentFY2026`,
+      tags: ["#PersistentSystems", "#TopTalentFY2026", "#Leadership", "#EngineeringExcellence"]
+    },
+    {
+      id: "excellence-in-delivery-achievement",
+      title: "Excellence in Delivery Award — Team Awards 2025",
+      subtitle: "Presented by Persistent Systems Leadership & Product Engineering",
+      category: "Delivery Excellence",
+      badge: "🏆 Excellence in Delivery",
+      image: "assets/images/post-excellence-delivery-1.jpg",
+      trophyImage: "assets/images/post-excellence-delivery-2.jpg",
+      gallery: [
+        "assets/images/post-excellence-delivery-1.jpg",
+        "assets/images/post-excellence-delivery-2.jpg",
+        "assets/images/post-excellence-delivery-3.jpg",
+        "assets/images/post-excellence-delivery-4.jpg",
+        "assets/images/post-excellence-delivery-5.jpg",
+        "assets/images/post-excellence-delivery-6.jpg"
+      ],
+      postUrl: "https://lnkd.in/p/djSCYW9y",
+      reactions: { likes: 146, comments: 10 },
+      description: `I am delighted to share that I have received the Excellence in Delivery award at Persistent Systems.
+
+This recognition for demonstrating exceptional commitment to quality and timely delivery, setting a benchmark for excellence, and contributing significantly to project success.
+
+My heartfelt appreciation to my teammates for their constant support, collaboration, and trust. I also extend my sincere thanks to our management for their guidance and for organizing such a memorable event.
+
+Proud to be part of a team that consistently strives for excellence and delivers meaningful outcomes.`,
+      tags: ["#PersistentSystems", "#ExcellenceInDelivery", "#TeamAwards2025", "#DeliveryExcellence"]
     }
   ],
 

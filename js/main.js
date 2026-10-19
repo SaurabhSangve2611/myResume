@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initStats();
   renderSkills('all');
   renderAwards('all');
+  renderAchievements();
   renderProjects();
   renderExperience();
   renderEducation();
@@ -27,7 +28,7 @@ function initScrambleText() {
     "IBM Verify Identity Governance (IVIG)",
     "Enterprise Java & Security Specialist",
     "PSIRT Vulnerability & APAR Lead",
-    "Multi-time Bravo Award Recipient"
+    "Multi-time Award Recipient"
   ];
   let titleIdx = 0;
   const target = document.getElementById('scramble-subtitle');
@@ -136,7 +137,7 @@ function renderSkills(filterCategory) {
   `).join('');
 }
 
-// Render Dedicated Bravo Awards & Recognitions
+// Render Dedicated Awards & Recognitions
 window.filterAwards = function(category) {
   if (window.soundSystem) window.soundSystem.play('click');
   document.querySelectorAll('.award-filter-btn').forEach(btn => {
@@ -150,7 +151,9 @@ function renderAwards(category) {
   if (!container) return;
 
   let list = RESUME_DATA.awards;
-  if (category !== 'all') {
+  if (category === 'awards') {
+    list = RESUME_DATA.awards.filter(a => a.category.toLowerCase().includes('award') || a.badge.toLowerCase().includes('bravo') || a.badge.toLowerCase().includes('award'));
+  } else if (category !== 'all') {
     list = RESUME_DATA.awards.filter(a => a.category.toLowerCase().includes(category.toLowerCase()));
   }
 
@@ -163,6 +166,18 @@ function renderAwards(category) {
             ${a.date}
           </span>
         </div>
+
+        ${a.image ? `
+          <div class="relative w-full h-44 rounded-lg overflow-hidden border border-amber-500/20 mb-4 bg-slate-950 group/img">
+            <img src="${a.image}" alt="${a.title}" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover/img:scale-105" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent flex items-end justify-between p-2.5">
+              <span class="text-[10px] font-mono text-cyan-300 flex items-center gap-1 bg-black/80 px-2 py-0.5 rounded border border-cyan-800/40 backdrop-blur">
+                🔍 Click to Enlarge
+              </span>
+              ${a.gallery ? `<span class="text-[10px] font-mono text-amber-300 bg-amber-950/80 px-2 py-0.5 rounded border border-amber-700/40">📸 ${a.gallery.length} Photos</span>` : ''}
+            </div>
+          </div>
+        ` : ''}
 
         <h3 class="text-lg font-bold text-white group-hover:text-amber-300 transition-colors mb-1.5">
           ${a.title}
@@ -188,14 +203,14 @@ function renderAwards(category) {
           <span class="flex items-center gap-1 text-purple-300">💬 ${a.reactions.comments}</span>
         </div>
         <button class="text-amber-400 hover:text-amber-300 font-mono font-semibold flex items-center gap-1 text-xs">
-          View Post & Citation ↗
+          View Award & Photo ↗
         </button>
       </div>
     </div>
   `).join('');
 }
 
-// Modal View for Award with celebratory confetti
+// Modal View for Award with celebratory fanfare
 window.viewAwardModal = function(awardId) {
   const award = RESUME_DATA.awards.find(a => a.id === awardId);
   if (!award) return;
@@ -217,7 +232,22 @@ window.viewAwardModal = function(awardId) {
       <div class="text-xs font-mono text-cyan-300">Presented by ${award.issuer} • ${award.date}</div>
     </div>
 
-    <div class="my-6 p-4 rounded-xl bg-black/60 border border-amber-500/30 text-amber-200 text-sm leading-relaxed italic text-center">
+    ${award.image ? `
+      <div class="my-4 rounded-xl overflow-hidden border border-amber-500/30 bg-black/70 shadow-[0_0_30px_rgba(245,158,11,0.2)]">
+        <img id="award-modal-primary-img" src="${award.image}" alt="${award.title}" class="w-full max-h-72 object-contain mx-auto cursor-zoom-in" onclick="window.openImageLightbox(this.src, '${award.title.replace(/'/g, "\\'")}')">
+      </div>
+    ` : ''}
+
+    ${award.gallery ? `
+      <div class="text-[11px] font-mono text-gray-400 mb-1.5">📸 Event Gallery (${award.gallery.length} Photos - Click to preview):</div>
+      <div class="flex items-center gap-2 overflow-x-auto pb-2 mb-4 scrollbar-thin">
+        ${award.gallery.map((g, idx) => `
+          <img src="${g}" alt="Event Photo ${idx+1}" class="w-16 h-16 object-cover rounded-lg border border-slate-700 hover:border-amber-400 cursor-pointer flex-shrink-0 transition-all" onclick="document.getElementById('award-modal-primary-img').src = '${g}'">
+        `).join('')}
+      </div>
+    ` : ''}
+
+    <div class="my-4 p-4 rounded-xl bg-black/60 border border-amber-500/30 text-amber-200 text-sm leading-relaxed italic text-center">
       ${award.citation}
     </div>
 
@@ -230,7 +260,7 @@ window.viewAwardModal = function(awardId) {
       <div class="flex items-center gap-3 text-xs font-mono text-gray-400">
         <span>👍 ${award.reactions.likes} Likes</span>
         <span>💬 ${award.reactions.comments} Comments</span>
-        <span>🔄 ${award.reactions.shares} Reposts</span>
+        <span>🔄 ${award.reactions.shares || 8} Reposts</span>
       </div>
       <a href="${RESUME_DATA.personal.linkedin}" target="_blank" class="btn-cyber-primary text-xs py-2 px-4">
         Verify on LinkedIn Profile ↗
@@ -241,6 +271,107 @@ window.viewAwardModal = function(awardId) {
   modal.classList.remove('hidden');
   modal.classList.add('flex');
 };
+
+// Render Key Achievements & Highlights Section
+function renderAchievements() {
+  const container = document.getElementById('achievements-container');
+  if (!container || !RESUME_DATA.achievements) return;
+
+  container.innerHTML = RESUME_DATA.achievements.map((ach) => `
+    <div class="hud-card p-6 flex flex-col justify-between relative border-emerald-500/30 bg-slate-900/60 hover:border-emerald-400/60 transition-all group">
+      <div class="hud-corner-tl"></div>
+      <div class="hud-corner-br"></div>
+
+      <div>
+        <!-- Category & Badge -->
+        <div class="flex items-center justify-between mb-3">
+          <span class="text-xs font-mono font-bold px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+            ${ach.badge}
+          </span>
+          <span class="text-[11px] font-mono text-cyan-300 bg-slate-950/80 px-2 py-0.5 rounded border border-slate-700">
+            ${ach.category}
+          </span>
+        </div>
+
+        <!-- Title & Subtitle -->
+        <h3 class="text-lg font-bold text-white group-hover:text-emerald-300 transition-colors mb-1">
+          ${ach.title}
+        </h3>
+        <div class="text-xs font-mono text-gray-400 mb-3">${ach.subtitle}</div>
+
+        <!-- Clickable Photo Preview -->
+        <div class="relative w-full h-48 rounded-lg overflow-hidden border border-emerald-500/20 mb-4 bg-slate-950 group/img cursor-pointer" onclick="window.openImageLightbox('${ach.image}', '${ach.title.replace(/'/g, "\\'")}')">
+          <img id="ach-img-${ach.id}" src="${ach.image}" alt="${ach.title}" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover/img:scale-105" loading="lazy">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent flex items-end justify-between p-2.5">
+            <span class="text-[10px] font-mono text-emerald-300 flex items-center gap-1 bg-black/80 px-2 py-0.5 rounded border border-emerald-800/40 backdrop-blur">
+              🔍 Click to Enlarge Photo
+            </span>
+            ${ach.gallery ? `<span class="text-[10px] font-mono text-cyan-300 bg-slate-950/80 px-2 py-0.5 rounded border border-cyan-700/40">📸 ${ach.gallery.length} Photos</span>` : ''}
+          </div>
+        </div>
+
+        <!-- Gallery Thumbnails (if multiple photos, e.g. Excellence in Delivery) -->
+        ${ach.gallery ? `
+          <div class="flex items-center gap-2 overflow-x-auto pb-2 mb-3">
+            ${ach.gallery.map((g, idx) => `
+              <img src="${g}" alt="Thumbnail ${idx+1}" class="w-12 h-12 object-cover rounded border border-slate-700 hover:border-emerald-400 cursor-pointer flex-shrink-0 transition-all" onclick="document.getElementById('ach-img-${ach.id}').src = '${g}'">
+            `).join('')}
+          </div>
+        ` : ''}
+
+        <!-- Exact LinkedIn Post Description -->
+        <div class="p-3.5 bg-black/50 rounded-lg border border-slate-700/60 text-xs text-gray-200 leading-relaxed whitespace-pre-line mb-4 font-sans">
+          ${ach.description}
+        </div>
+
+        <!-- Tags -->
+        <div class="flex flex-wrap gap-1.5 mb-4">
+          ${ach.tags.map(t => `
+            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-950/40 text-emerald-300 border border-emerald-800/30">${t}</span>
+          `).join('')}
+        </div>
+      </div>
+
+      <!-- Footer: Reactions & LinkedIn Direct Link -->
+      <div class="pt-3 border-t border-slate-700/60 flex flex-wrap items-center justify-between gap-2 text-xs">
+        <div class="flex items-center gap-3 font-mono text-gray-400">
+          <span class="text-cyan-300">👍 ${ach.reactions.likes} Likes</span>
+          <span class="text-purple-300">💬 ${ach.reactions.comments} Comments</span>
+        </div>
+        <a href="${ach.postUrl}" target="_blank" class="btn-cyber-primary text-xs py-1.5 px-3 flex items-center gap-1.5">
+          <span>View Post on LinkedIn</span>
+          <span>↗</span>
+        </a>
+      </div>
+    </div>
+  `).join('');
+}
+
+// High-Resolution Image Lightbox Modal Handlers
+window.openImageLightbox = function(src, title) {
+  const modal = document.getElementById('image-lightbox-modal');
+  const img = document.getElementById('lightbox-img');
+  const caption = document.getElementById('lightbox-caption');
+  if (!modal || !img) return;
+  img.src = src;
+  if (caption) caption.innerText = title || 'High-Resolution View';
+  modal.classList.remove('hidden');
+  modal.classList.add('flex');
+  if (window.soundSystem) window.soundSystem.play('click');
+};
+
+window.closeImageLightbox = function() {
+  const modal = document.getElementById('image-lightbox-modal');
+  if (!modal) return;
+  modal.classList.add('hidden');
+  modal.classList.remove('flex');
+};
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    window.closeImageLightbox();
+  }
+});
 
 window.closeAwardModal = function() {
   const modal = document.getElementById('award-modal');

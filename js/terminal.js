@@ -21,6 +21,8 @@ class DeveloperTerminal {
       projects: () => this.cmdProjects(),
       awards: () => this.cmdAwards(),
       bravo: () => this.cmdAwards(),
+      honors: () => this.cmdAwards(),
+      achievements: () => this.cmdAchievements(),
       education: () => this.cmdEducation(),
       certifications: () => this.cmdCertifications(),
       contact: () => this.cmdContact(),
@@ -133,11 +135,12 @@ class DeveloperTerminal {
     this.printLine(`
       <div class="text-emerald-400 font-mono font-semibold mb-1">⚡ Available Terminal Commands:</div>
       <table class="w-full text-xs font-mono border-spacing-y-1">
-        <tr><td class="text-yellow-300 w-32">whoami / bio</td><td class="text-gray-300">View developer profile & summary</td></tr>
+        <tr><td class="text-yellow-300 w-36">whoami / bio</td><td class="text-gray-300">View developer profile & summary</td></tr>
         <tr><td class="text-yellow-300">skills</td><td class="text-gray-300">Inspect technical skill matrix & proficiencies</td></tr>
-        <tr><td class="text-yellow-300">awards / bravo</td><td class="text-gray-300">Display Bravo Awards & LinkedIn recognitions</td></tr>
+        <tr><td class="text-yellow-300">awards / honors</td><td class="text-gray-300">Display Awards & Accolades</td></tr>
+        <tr><td class="text-yellow-300">achievements</td><td class="text-gray-300">View Semicolons hackathon, Top Talent, & Delivery awards</td></tr>
         <tr><td class="text-yellow-300">projects</td><td class="text-gray-300">List enterprise & CDAC flagship projects</td></tr>
-        <tr><td class="text-yellow-300">experience</td><td class="text-gray-300">Work experience details (Blucor Systems)</td></tr>
+        <tr><td class="text-yellow-300">experience</td><td class="text-gray-300">Work experience details (Persistent & BluCor)</td></tr>
         <tr><td class="text-yellow-300">education</td><td class="text-gray-300">Academic background & CDAC credentials</td></tr>
         <tr><td class="text-yellow-300">certifications</td><td class="text-gray-300">Professional certifications list</td></tr>
         <tr><td class="text-yellow-300">contact</td><td class="text-gray-300">Direct contact info & social handles</td></tr>
@@ -184,14 +187,29 @@ class DeveloperTerminal {
   }
 
   cmdAwards() {
-    let out = `<div class="text-amber-400 font-semibold mb-2">🏆 Bravo Awards (7x Recipient @ Persistent Systems) & Accolades:</div>`;
+    let out = `<div class="text-amber-400 font-semibold mb-2">🏆 Awards & Accolades (Persistent Systems):</div>`;
     RESUME_DATA.awards.forEach((aw, idx) => {
       out += `
         <div class="p-2.5 my-1.5 bg-yellow-950/20 border-l-4 border-amber-400 rounded-r text-xs">
           <div class="font-bold text-yellow-300 text-sm">${aw.badge}: ${aw.title}</div>
-          <div class="text-gray-400 text-xs mt-0.5">Issuer: <span class="text-gray-200">${aw.issuer}</span></div>
+          <div class="text-gray-400 text-xs mt-0.5">Issuer: <span class="text-gray-200">${aw.issuer}</span> • ${aw.date}</div>
           <div class="text-cyan-200 italic mt-1">${aw.citation}</div>
           <div class="text-gray-400 text-xs mt-1">LinkedIn Reactions: 👍 ${aw.reactions.likes} | 💬 ${aw.reactions.comments}</div>
+        </div>
+      `;
+    });
+    this.printLine(out);
+  }
+
+  cmdAchievements() {
+    let out = `<div class="text-emerald-400 font-semibold mb-2">⭐ Key Achievements & Verified LinkedIn Publications:</div>`;
+    RESUME_DATA.achievements.forEach(ach => {
+      out += `
+        <div class="p-2.5 my-1.5 bg-emerald-950/20 border-l-4 border-emerald-400 rounded-r text-xs">
+          <div class="font-bold text-emerald-300 text-sm">${ach.badge}: ${ach.title}</div>
+          <div class="text-cyan-300 font-mono text-[11px] mt-0.5">${ach.subtitle}</div>
+          <div class="text-gray-300 mt-1.5 whitespace-pre-line text-xs font-sans">${ach.description}</div>
+          <div class="mt-2 text-cyan-400 font-mono text-[11px]">🔗 Post Link: ${ach.postUrl} (Reactions: 👍 ${ach.reactions.likes} | 💬 ${ach.reactions.comments})</div>
         </div>
       `;
     });
