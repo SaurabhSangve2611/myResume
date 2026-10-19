@@ -23,11 +23,11 @@ document.addEventListener('DOMContentLoaded', () => {
 // Dynamic Text Scramble Effect for Hero Header
 function initScrambleText() {
   const titles = [
-    "Full Stack Software Developer",
-    "Java & Spring Boot Engineer",
-    "React.js & Cloud Architect",
-    "CDAC DAC High-Honors Alumnus",
-    "Clean Code & Agile Craftsman"
+    "Engineering Lead @ Persistent Systems",
+    "IBM Verify Identity Governance (IVIG)",
+    "Enterprise Java & Security Specialist",
+    "PSIRT & APAR L3 Engineering Lead",
+    "Multi-time Bravo Award Recipient"
   ];
   let titleIdx = 0;
   const target = document.getElementById('scramble-subtitle');
@@ -339,43 +339,129 @@ function renderExperience() {
   const container = document.getElementById('experience-container');
   if (!container) return;
 
-  container.innerHTML = RESUME_DATA.experience.map(exp => `
-    <div class="hud-card p-6 relative">
+  container.innerHTML = `
+    <!-- Persistent Systems Group Card -->
+    <div class="hud-card p-6 sm:p-8 relative border-cyan-500/30 bg-gradient-to-br from-slate-900/90 via-slate-900/70 to-cyan-950/20">
       <div class="hud-corner-tl"></div>
       <div class="hud-corner-br"></div>
 
-      <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
-        <div>
-          <h3 class="text-xl font-bold text-white">${exp.role}</h3>
-          <div class="text-sm font-mono text-cyan-300">${exp.company} • ${exp.location}</div>
+      <!-- Company Main Header -->
+      <div class="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-slate-700/60 mb-6">
+        <div class="flex items-center gap-4">
+          <div class="w-14 h-14 rounded-xl bg-orange-500/20 border border-orange-500/40 flex items-center justify-center font-bold text-orange-400 text-2xl shadow-[0_0_20px_rgba(249,115,22,0.2)]">
+            PS
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <h3 class="text-2xl font-extrabold text-white">Persistent Systems</h3>
+              <span class="text-xs font-mono px-2.5 py-0.5 rounded-full bg-cyan-950 border border-cyan-800 text-cyan-300">5 yrs 2 mos</span>
+            </div>
+            <div class="text-xs font-mono text-gray-400 mt-1 flex flex-wrap items-center gap-2">
+              <span>Full-time</span>
+              <span>•</span>
+              <span>Pune District, Maharashtra, India · Hybrid</span>
+              <span>•</span>
+              <span class="text-emerald-400 font-semibold">4 Successive Promotions</span>
+            </div>
+          </div>
         </div>
-        <span class="text-xs font-mono px-3 py-1 rounded-full bg-purple-500/20 text-purple-300 border border-purple-500/30">
-          ${exp.period}
-        </span>
+
+        <a href="${RESUME_DATA.personal.linkedin}" target="_blank" class="btn-cyber-outline text-xs py-1.5 px-3">
+          View on LinkedIn ↗
+        </a>
       </div>
 
-      <div class="p-3 bg-slate-900/60 rounded-lg border border-slate-700/60 mb-4">
-        <span class="text-xs font-mono text-cyan-400 font-semibold">Key Enterprise Initiative:</span>
-        <span class="text-xs text-gray-200 ml-1">${exp.project}</span>
-        <p class="text-xs text-gray-400 mt-1">${exp.description}</p>
-      </div>
+      <!-- Roles Timeline inside Persistent Systems -->
+      <div class="relative pl-6 sm:pl-8 border-l-2 border-cyan-500/30 space-y-8">
+        ${RESUME_DATA.experience.filter(e => e.company === 'Persistent Systems').map((exp, idx) => `
+          <div class="relative group">
+            <!-- Timeline Node Indicator -->
+            <div class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full ${exp.current ? 'bg-cyan-400 ring-4 ring-cyan-500/30' : 'bg-slate-700 group-hover:bg-cyan-400'} border-2 border-slate-900 transition-colors"></div>
 
-      <ul class="space-y-2 mb-4">
-        ${exp.highlights.map(h => `
-          <li class="flex items-start gap-2 text-xs text-gray-300 leading-relaxed">
-            <span class="text-emerald-400 font-mono mt-0.5">✔</span>
-            <span>${h}</span>
-          </li>
-        `).join('')}
-      </ul>
+            <div class="flex flex-wrap items-start justify-between gap-2 mb-2">
+              <div>
+                <h4 class="text-lg sm:text-xl font-bold text-white flex items-center gap-2.5">
+                  ${exp.role}
+                  ${exp.current ? '<span class="status-indicator text-[10px] py-0.5 px-2.5"><span class="pulse-dot"></span> CURRENT ROLE</span>' : ''}
+                  ${exp.awardWon ? `<span class="badge-ribbon text-[10px]">${exp.awardWon}</span>` : ''}
+                </h4>
+                <div class="text-xs font-mono text-cyan-300 mt-0.5">${exp.period} · <span class="text-gray-400">${exp.duration}</span></div>
+              </div>
+            </div>
 
-      <div class="flex flex-wrap gap-1.5 pt-3 border-t border-slate-800">
-        ${exp.techStack.map(t => `
-          <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-purple-950/40 text-purple-300 border border-purple-500/30">${t}</span>
+            <!-- Project & Initiative Header -->
+            <div class="p-3 bg-black/40 rounded-lg border border-slate-700/60 my-3">
+              <div class="text-xs font-mono text-cyan-400 font-semibold flex items-center gap-1.5">
+                <span>🛡️ Domain & Project:</span>
+                <span class="text-gray-200">${exp.project}</span>
+              </div>
+              <p class="text-xs text-gray-300 mt-1 leading-relaxed">${exp.description}</p>
+            </div>
+
+            <!-- Key Responsibilities & Leadership Bullet Points -->
+            <ul class="space-y-1.5 mb-3 text-xs text-gray-300">
+              ${exp.highlights.map(h => `
+                <li class="flex items-start gap-2 leading-relaxed">
+                  <span class="text-cyan-400 font-mono mt-0.5">▹</span>
+                  <span>${h}</span>
+                </li>
+              `).join('')}
+            </ul>
+
+            <!-- Tech Badges -->
+            <div class="flex flex-wrap gap-1.5 pt-2">
+              ${exp.techStack.map(t => `
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-900/80 text-cyan-300 border border-cyan-800/40">${t}</span>
+              `).join('')}
+            </div>
+          </div>
         `).join('')}
       </div>
     </div>
-  `).join('');
+
+    <!-- BluCor Systems Pvt. Ltd. Card -->
+    ${RESUME_DATA.experience.filter(e => e.company !== 'Persistent Systems').map(exp => `
+      <div class="hud-card p-6 sm:p-8 relative mt-6 border-slate-700/60 bg-slate-900/50">
+        <div class="hud-corner-tl"></div>
+        <div class="hud-corner-br"></div>
+
+        <div class="flex flex-wrap items-center justify-between gap-4 pb-4 border-b border-slate-800 mb-4">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 rounded-xl bg-purple-500/20 border border-purple-500/40 flex items-center justify-center font-bold text-purple-300 text-xl">
+              BC
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-white">${exp.company}</h3>
+              <div class="text-xs font-mono text-gray-400 mt-0.5">${exp.employmentType} · ${exp.duration} · ${exp.location}</div>
+            </div>
+          </div>
+          <span class="text-xs font-mono px-3 py-1 rounded-full bg-slate-800 text-gray-300 border border-slate-700">
+            ${exp.period}
+          </span>
+        </div>
+
+        <div class="mb-3">
+          <h4 class="text-base font-bold text-white">${exp.role} — <span class="text-sm font-mono text-purple-300">${exp.project}</span></h4>
+          <p class="text-xs text-gray-300 mt-1">${exp.description}</p>
+        </div>
+
+        <ul class="space-y-1.5 mb-4 text-xs text-gray-300">
+          ${exp.highlights.map(h => `
+            <li class="flex items-start gap-2 leading-relaxed">
+              <span class="text-purple-400 font-mono mt-0.5">▹</span>
+              <span>${h}</span>
+            </li>
+          `).join('')}
+        </ul>
+
+        <div class="flex flex-wrap gap-1.5 pt-2 border-t border-slate-800">
+          ${exp.techStack.map(t => `
+            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-purple-950/40 text-purple-300 border border-purple-500/30">${t}</span>
+          `).join('')}
+        </div>
+      </div>
+    `).join('')}
+  `;
 }
 
 // Render Education & Certifications

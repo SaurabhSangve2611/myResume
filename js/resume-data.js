@@ -1,106 +1,236 @@
 /**
  * Saurabh Ajit Sangve - Digital Resume Data Model
- * Complete structured data extracted from resume & LinkedIn profile
+ * Extracted from Resume & LinkedIn Profile
+ * Engineering Lead @ Persistent Systems (IBM Verify Identity Governance)
  */
 
 const RESUME_DATA = {
   personal: {
     name: "Saurabh Ajit Sangve",
-    headline: "Software Developer | Full Stack Java & React Specialist",
-    title: "Software Developer",
+    headline: "Engineering Lead @ Persistent Systems | IBM Verify Identity Governance (IVIG) | Enterprise Java, IAM & Security",
+    title: "Engineering Lead",
+    company: "Persistent Systems",
     email: "saurabhsangve05@gmail.com",
     phone: "+91 7057323228",
-    location: "Pune, Maharashtra, India",
+    location: "Pune, Maharashtra, India (Hybrid)",
     address: "B-A8, F No-1, Kunal Residency, Thergaon, Pune - 411033",
-    status: "Available for Opportunities",
+    status: "Engineering Lead @ Persistent Systems",
     linkedin: "https://www.linkedin.com/in/saurabh-sangve-860882193/",
     github: "https://github.com",
     avatar: "assets/images/saurabh.jpg",
-    bio: "Passionate and detail-oriented Software Developer with hands-on expertise in building scalable, enterprise-grade web applications. Proficient in Java, Spring Boot, Hibernate/JPA, RESTful microservices, and React.js frontend development. Dedicated to clean code, test-driven craftsmanship, and solving real-world challenges through elegant software engineering.",
+    bio: "Accomplished Engineering Lead with 6+ years of enterprise software engineering experience, including over 5 years of rapid progression at Persistent Systems delivering critical releases for IBM Verify Identity Governance (IVIG) Virtual Appliance. Proven track record leading technical architecture, PSIRT security vulnerability mitigations, APAR defect triage, Request for Enhancement (RFE) implementations, and L3 mission-critical PMR engineering. Multi-time Bravo Award recipient recognized for delivery excellence, security hardening, and technical leadership across complex, high-scale identity governance systems.",
     stats: [
-      { label: "Core Technologies", value: "15+" },
-      { label: "Enterprise & Academic Projects", value: "4+" },
-      { label: "Bravo & Spot Awards", value: "3+" },
-      { label: "Professional Certifications", value: "4" }
+      { label: "Total Experience", value: "6+ Yrs" },
+      { label: "Persistent Systems", value: "5+ Yrs" },
+      { label: "Career Progression", value: "4 Tiers" },
+      { label: "Bravo Awards", value: "Multiple" }
     ]
   },
 
   skills: [
     {
-      category: "Backend & Frameworks",
+      category: "Enterprise IAM & Systems",
       skills: [
-        { name: "Java (Core & Advanced)", level: 90, icon: "coffee", tags: ["OOP", "Collections", "Multithreading", "Streams"] },
-        { name: "Spring Boot", level: 88, icon: "feather", tags: ["Microservices", "REST APIs", "Spring Security", "Actuator"] },
-        { name: "Hibernate / JPA", level: 85, icon: "database", tags: ["ORM", "Entity Mappings", "HQL", "Criteria API"] },
-        { name: "Java EE (Servlets, JSP)", level: 80, icon: "server", tags: ["MVC", "Filters", "Sessions", "JDBC"] },
-        { name: "C / C++", level: 75, icon: "cpu", tags: ["Data Structures", "Pointers", "Memory Management"] }
+        { name: "IBM Verify Identity Governance (IVIG)", level: 95, icon: "shield", tags: ["Virtual Appliance", "ISVG", "IGIVA", "Identity Governance", "Access Management"] },
+        { name: "PSIRT & Product Security", level: 92, icon: "lock", tags: ["Vulnerability Remediation", "Security Hardening", "IBM Security Standards", "CVE Patching"] },
+        { name: "Defect Triage & Engineering (APAR/PMR)", level: 95, icon: "tool", tags: ["L3 Customer Support", "APARs", "Development APARs", "Fixpacks", "Interim Fixes"] },
+        { name: "Linux & Virtual Appliance OS", level: 90, icon: "terminal", tags: ["Shell Scripting", "Hardening", "Appliance Lifecycle", "Deployment"] }
       ]
     },
     {
-      category: "Frontend Technologies",
+      category: "Core Backend & Frameworks",
       skills: [
-        { name: "React.js", level: 82, icon: "code", tags: ["Hooks", "Components", "State Management", "SPA"] },
-        { name: "JavaScript (ES6+)", level: 85, icon: "zap", tags: ["DOM", "Async/Await", "Fetch API", "Event Loop"] },
-        { name: "HTML5 & CSS3", level: 90, icon: "layout", tags: ["Responsive Design", "Flexbox", "Grid", "Animations"] },
-        { name: "Bootstrap & Tailwind", level: 88, icon: "columns", tags: ["Mobile First", "Custom Utility", "Responsive Layouts"] },
-        { name: "Thymeleaf & jQuery", level: 80, icon: "layers", tags: ["Server Templates", "Ajax", "DOM Manipulation"] }
+        { name: "Java (Core & Advanced / EE)", level: 95, icon: "coffee", tags: ["Multithreading", "Concurrency", "OOP", "Collections", "Streams", "Memory Profiling"] },
+        { name: "Spring Boot & Microservices", level: 90, icon: "feather", tags: ["RESTful APIs", "Spring Security", "Actuator", "Dependency Injection"] },
+        { name: "Hibernate / JPA", level: 88, icon: "database", tags: ["ORM", "Entity Mappings", "Transaction Management", "HQL"] },
+        { name: "Web Services & APIs", level: 90, icon: "server", tags: ["REST APIs", "SOAP/XML", "JSON", "Service Integrations"] },
+        { name: "C / C++", level: 78, icon: "cpu", tags: ["Data Structures", "System Programming", "Pointers"] }
       ]
     },
     {
-      category: "Databases & Storage",
+      category: "Frontend & Full Stack",
       skills: [
-        { name: "MySQL", level: 88, icon: "hard-drive", tags: ["Schema Design", "Complex Joins", "Indexing", "Stored Procs"] },
-        { name: "Oracle SQL", level: 80, icon: "database", tags: ["PL/SQL", "Relational Modeling", "Triggers"] },
-        { name: "H2 In-Memory DB", level: 82, icon: "disc", tags: ["Rapid Prototyping", "Integration Testing"] }
+        { name: "React.js", level: 82, icon: "code", tags: ["Components", "Hooks", "SPA Architecture", "State Management"] },
+        { name: "JavaScript (ES6+) & HTML5/CSS3", level: 88, icon: "layout", tags: ["Async/Await", "DOM", "Bootstrap", "Tailwind", "Responsive UI"] },
+        { name: "Thymeleaf & Servlets/JSP", level: 85, icon: "layers", tags: ["Server Templates", "MVC Architecture", "Session Management"] }
       ]
     },
     {
-      category: "DevOps, Tools & Servers",
+      category: "Databases & DevOps Tools",
       skills: [
-        { name: "Git & GitHub", level: 88, icon: "git-branch", tags: ["Branching", "Pull Requests", "Version Control"] },
-        { name: "Apache Tomcat", level: 85, icon: "server", tags: ["Deployment", "WAR Config", "Server Management"] },
-        { name: "IDE & Tooling", level: 90, icon: "terminal", tags: ["VS Code", "Eclipse", "STS", "NetBeans", "Postman"] },
-        { name: "WordPress CMS", level: 75, icon: "globe", tags: ["Site Config", "Custom Plugins", "Theme Design"] }
+        { name: "Relational DBs (MySQL, Oracle, DB2)", level: 88, icon: "hard-drive", tags: ["Query Optimization", "Complex Joins", "Schema Design", "Transactions"] },
+        { name: "Git, GitHub & Version Control", level: 92, icon: "git-branch", tags: ["Branching Strategy", "PR Reviews", "Release Tagging", "CI/CD"] },
+        { name: "Application Servers", level: 88, icon: "server", tags: ["Apache Tomcat", "WebSphere", "Virtual Appliance Packaging"] },
+        { name: "IDE & Tooling", level: 92, icon: "tool", tags: ["Eclipse", "VS Code", "STS", "Postman", "Defect Tracking Tools"] }
       ]
     }
   ],
 
   experience: [
     {
-      company: "Blucor Systems Pvt Ltd",
-      location: "Pune, India",
-      role: "Software Developer",
-      period: "April 2020 – May 2021",
-      project: "Eagle Brother’s Pizza (Enterprise Food Ordering Platform)",
-      description: "Spearheaded backend business logic implementation and responsive UI engineering for a full-scale online food ordering and inventory system.",
+      company: "Persistent Systems",
+      companyLogo: "persistent",
+      role: "Engineering Lead",
+      period: "Jan 2026 – Present",
+      duration: "10 mos",
+      location: "Pune, Maharashtra, India · Hybrid",
+      employmentType: "Full-time",
+      project: "IBM Verify Identity Governance (IVIG) Virtual Appliance",
+      current: true,
+      description: "Leading technical delivery, architecture decisions, and product security for enterprise-scale IBM Verify Identity Governance Virtual Appliance releases.",
       highlights: [
-        "Designed and implemented high-performance backend REST APIs using Java and Spring Boot, integrating Hibernate with JPA for robust data persistence.",
-        "Built responsive client-facing interfaces with HTML5, CSS3, JavaScript, and Bootstrap, creating seamless Thymeleaf server-side templates.",
-        "Optimized MySQL database transaction performance, query indexing, and connection pooling to ensure zero-lag ordering during peak hours.",
-        "Conducted end-to-end unit testing (JUnit), bug fixing, and continuous code quality improvements under agile sprint deadlines.",
-        "Maintained clean Git workflows with frequent commits, peer reviews, and regular progress demos to senior leadership."
+        "Provide overarching technical leadership and oversight, steering design decisions, implementation strategies, and engineering best practices across agile squads.",
+        "Enforce delivery excellence, robust code reviews, automated testing coverage, and strict release readiness criteria for high-stakes enterprise IAM deployments.",
+        "Core contributor and technical lead delivering IBM Verify Identity Governance (IVIG) Virtual Appliance releases supporting global Fortune 500 security footprints.",
+        "Lead Request for Enhancement (RFE) initiatives, translating complex enterprise customer requirements into scalable, resilient product capabilities.",
+        "Spearhead advanced defect triage and resolution (APARs and Development APARs), ensuring long-term product stability, zero-regression deployments, and runtime performance optimization.",
+        "Direct PSIRT (Product Security Incident Response Team) initiatives, designing and delivering rapid security fixes for critical CVEs and vulnerabilities in compliance with IBM Security standards.",
+        "Provide mission-critical L3 engineering support for high-severity PMRs (Problem Management Records), conducting deep root-cause analysis under tight SLA commitments.",
+        "Drive comprehensive virtual appliance hardening, validation, and multi-release testing to guarantee enterprise-grade operational reliability."
       ],
-      techStack: ["Java", "Spring Boot", "Hibernate/JPA", "MySQL", "Thymeleaf", "JavaScript", "Bootstrap", "Git", "Apache Tomcat"]
+      techStack: ["Java", "Linux", "IBM Verify Identity Governance (IVIG)", "Virtual Appliance", "PSIRT Security", "APAR Resolution", "L3 PMR Support", "REST APIs", "Git", "Security Hardening"]
+    },
+    {
+      company: "Persistent Systems",
+      companyLogo: "persistent",
+      role: "Lead Software Engineer",
+      period: "Oct 2024 – Jan 2026",
+      duration: "1 yr 4 mos",
+      location: "Pune, Maharashtra, India · Hybrid",
+      employmentType: "Full-time",
+      project: "IBM Verify Identity Governance (IVIG VA) & ISVG VA",
+      current: false,
+      description: "Core member of the engineering team responsible for architecting and delivering new IVIG Virtual Appliance and ISVG VA releases.",
+      highlights: [
+        "Delivered core product features for new IBM Verify Identity Governance Virtual Appliance (IVIG VA) and ISVG VA releases.",
+        "Designed and implemented high-priority Request for Enhancement (RFE) features, boosting appliance throughput and governance functionality.",
+        "Conducted root-cause analysis on complex APARs and Development APARs, maintaining product stability across global client installations.",
+        "Contributed high-priority PSIRT vulnerability remediations, ensuring adherence to rigorous IBM security standards.",
+        "Delivered L3 customer support for urgent PMRs, diagnosing edge-case production anomalies and issuing interim fixpacks.",
+        "Led product hardening, performance benchmarking, and end-to-end regression testing across multiple release cycles."
+      ],
+      techStack: ["Core Java", "Java EE", "Linux", "IVIG VA", "ISVG VA", "PSIRT", "APARs", "PMR L3", "Fixpacks", "Interim Fixes"]
+    },
+    {
+      company: "Persistent Systems",
+      companyLogo: "persistent",
+      role: "Senior Software Engineer",
+      period: "Apr 2023 – Oct 2024",
+      duration: "1 yr 7 mos",
+      location: "Pune, Maharashtra, India · Remote",
+      employmentType: "Full-time",
+      project: "IBM Security and Verify Governance (IGIVA / ISVGVA)",
+      current: false,
+      awardWon: "🏆 Bravo Award Recipient",
+      description: "Drove code enhancements, security fixes, and defect engineering for IBM Security and Verify Governance Virtual Appliance.",
+      highlights: [
+        "Honored with the prestigious Bravo Award for exceptional contributions to IBM Security and Verify Governance product stability.",
+        "Executed core code enhancements across ISVG VA backend subsystems.",
+        "Resolved critical APARs and Development APARs with zero regression rates.",
+        "Engineered rapid-response PSIRT fixes to mitigate high-vulnerability security threats.",
+        "Managed L3 PMR support queues, packaging and delivering official fixpacks and interim fixpacks under tight timelines.",
+        "Collaborated seamlessly across globally distributed engineering, QA, and security teams."
+      ],
+      techStack: ["Java", "Web Services APIs", "IGIVA / ISVGVA", "Security Fixes", "Fixpack Packaging", "APAR Triage", "Linux"]
+    },
+    {
+      company: "Persistent Systems",
+      companyLogo: "persistent",
+      role: "Software Engineer",
+      period: "Sep 2021 – Apr 2023",
+      duration: "1 yr 8 mos",
+      location: "Pune, Maharashtra, India · Remote",
+      employmentType: "Full-time",
+      project: "IBM Security and Verify Governance (IGIVA / ISVGVA)",
+      current: false,
+      awardWon: "🏆 Bravo Award Recipient",
+      description: "Spearheaded defect fixes, RFE code implementations, and L3 support for the IGIVA/ISVGVA product suite.",
+      highlights: [
+        "Earned Bravo Award recognition for outstanding dedication, rapid bug resolution, and high-quality deliverables.",
+        "Implemented code enhancements in ISVG VA to support customer feature requests.",
+        "Diagnosed and resolved critical APAR defects in core Java modules.",
+        "Contributed to PSIRT security vulnerability fixes, securing sensitive identity governance pipelines.",
+        "Packaged and validated fixpacks and interim patch releases for enterprise customer accounts."
+      ],
+      techStack: ["Java", "C++", "IGIVA / ISVGVA", "APARs", "PSIRT", "PMR Cases", "Defect Testing"]
+    },
+    {
+      company: "BluCor Systems Pvt. Ltd.",
+      companyLogo: "blucor",
+      role: "Software Developer",
+      period: "Apr 2020 – Apr 2021",
+      duration: "1 yr 1 mo",
+      location: "Pune, Maharashtra, India",
+      employmentType: "Full-time",
+      project: "Eagle Brother’s Pizza (Full Stack Food Commerce Platform)",
+      current: false,
+      description: "Engineered responsive UI and backend Spring Boot services for full-scale commercial food ordering platform.",
+      highlights: [
+        "Developed full-stack web features using Java, Spring Boot, Hibernate with JPA, and MySQL.",
+        "Designed and implemented dynamic Thymeleaf web views with Bootstrap and JavaScript.",
+        "Optimized database queries and transaction isolation levels for high-throughput ordering.",
+        "Conducted unit testing, bug fixing, and continuous code integration using Git."
+      ],
+      techStack: ["Java", "Spring Boot", "Hibernate/JPA", "MySQL", "Thymeleaf", "JavaScript", "Bootstrap", "Git"]
     }
   ],
 
   projects: [
     {
+      title: "IBM Verify Identity Governance (IVIG) Virtual Appliance",
+      type: "Enterprise Security Flagship",
+      institution: "Persistent Systems / IBM Security",
+      role: "Engineering Lead / Lead Software Engineer",
+      badge: "Enterprise Flagship",
+      featured: true,
+      summary: "Next-generation Virtual Appliance powering enterprise Identity & Access Governance, role lifecycle management, compliance enforcement, and access certification for global Fortune 500 customers.",
+      highlights: [
+        "Lead technical delivery of IVIG VA releases, guiding architecture, code quality, and security hardening.",
+        "Architect and implement major Request for Enhancement (RFE) features to optimize governance workflows.",
+        "Resolve high-priority APARs and Development APARs, eliminating core defects and preventing regressions.",
+        "Direct PSIRT vulnerability remediations complying with rigorous IBM Product Security standards.",
+        "Provide tier-1 L3 PMR engineering support for mission-critical client incidents."
+      ],
+      techStack: ["Java", "Linux", "Virtual Appliance OS", "IVIG VA", "PSIRT Security", "APAR Resolution", "Fixpacks", "REST APIs"],
+      links: {
+        demo: "https://www.linkedin.com/in/saurabh-sangve-860882193/",
+        github: "https://www.linkedin.com/in/saurabh-sangve-860882193/"
+      }
+    },
+    {
+      title: "IBM Security and Verify Governance (ISVG VA / IGIVA)",
+      type: "Commercial Security Platform",
+      institution: "Persistent Systems / IBM Security",
+      role: "Senior Software Engineer / Software Engineer",
+      badge: "Bravo Awarded",
+      featured: true,
+      summary: "Comprehensive identity governance suite for auditing, segregation of duties (SoD), and user access lifecycle. Honored with multiple Bravo Awards for technical delivery excellence and security fixes.",
+      highlights: [
+        "Awarded multiple Bravo Awards for delivering high-impact code enhancements and defect resolutions.",
+        "Engineered critical PSIRT fixes mitigating vulnerabilities in enterprise identity repositories.",
+        "Diagnosed complex L3 PMRs and authored official fixpacks and interim fix distributions.",
+        "Streamlined defect testing pipelines and maintained high customer satisfaction ratings."
+      ],
+      techStack: ["Java", "Web Services", "ISVG VA", "IGIVA", "Security Patching", "Linux", "MySQL / DB2"],
+      links: {
+        demo: "https://www.linkedin.com/in/saurabh-sangve-860882193/",
+        github: "https://www.linkedin.com/in/saurabh-sangve-860882193/"
+      }
+    },
+    {
       title: "E-Pariksha — Secured Online Examination Portal",
       type: "PG-Diploma DAC Flagship Project",
       institution: "CDAC ACTS Hyderabad",
       role: "Full Stack Developer",
-      badge: "Flagship Architecture",
+      badge: "High Honors",
       featured: true,
-      summary: "A robust, highly secure online examination portal designed to conduct automated tests with timed assessments, randomized question banks, anti-cheating protocols, and real-time score analytics.",
+      summary: "Secure online testing engine with timed question delivery, role-based authentication, anti-cheating restrictions, and real-time score computation.",
       highlights: [
-        "Architected modern responsive Single Page Application (SPA) frontend in React.js, HTML5, CSS3, and Bootstrap for students and test evaluators.",
-        "Engineered scalable Java Spring Boot backend microservices integrating Hibernate/JPA for test scheduling, response validation, and automatic score calculations.",
-        "Secured student endpoints with role-based authorization and session integrity safeguards.",
-        "Implemented relational schema in MySQL for question banks, multimedia questions, and exam history.",
-        "Collaborated under mentor supervision with strict Git commit hygiene and milestone deliveries."
+        "Engineered responsive SPA frontend using React.js, HTML5, CSS3, and Bootstrap.",
+        "Developed Java Spring Boot microservices with Hibernate/JPA for test scheduling and evaluation.",
+        "Implemented secure MySQL schema for randomized question banks and student response telemetry."
       ],
-      techStack: ["React.js", "Java", "Spring Boot", "Hibernate JPA", "MySQL", "REST APIs", "Git", "VS Code"],
+      techStack: ["React.js", "Java", "Spring Boot", "Hibernate JPA", "MySQL", "REST APIs", "Git"],
       links: {
         demo: "#",
         github: "https://github.com"
@@ -109,57 +239,17 @@ const RESUME_DATA = {
     {
       title: "Eagle Brother’s Pizza — Food Commerce Suite",
       type: "Commercial Production Platform",
-      institution: "Blucor Systems Pvt Ltd",
+      institution: "BluCor Systems Pvt. Ltd.",
       role: "Software Developer",
-      badge: "Production Deployed",
-      featured: true,
-      summary: "Commercial food ordering platform enabling menu browsing, custom pizza builder, cart checkout, real-time order tracking, and kitchen inventory dispatch.",
-      highlights: [
-        "Implemented complete order processing pipeline using Spring Boot and Hibernate with transactional safety.",
-        "Crafted dynamic UI views using Bootstrap and Thymeleaf with asynchronous AJAX updates.",
-        "Managed database schema migrations and indexing in MySQL to optimize checkout response times.",
-        "Eliminated critical edge-case bugs and implemented comprehensive unit test coverage."
-      ],
-      techStack: ["Java", "Spring Boot", "JPA", "MySQL", "Thymeleaf", "Bootstrap", "Apache Tomcat"],
-      links: {
-        demo: "#",
-        github: "https://github.com"
-      }
-    },
-    {
-      title: "E-Commerce Web Application",
-      type: "Full Stack Academic Project",
-      institution: "Academic Portfolio",
-      role: "Software Developer",
-      badge: "MVC Architecture",
+      badge: "Commercial Production",
       featured: false,
-      summary: "End-to-end e-commerce store with product catalog browsing, category filtering, persistent shopping cart, and order confirmation.",
+      summary: "Production food commerce platform enabling dynamic pizza customizer, shopping cart, transactional payments, and kitchen order tracking.",
       highlights: [
-        "Implemented classic Model-View-Controller (MVC) architectural design pattern to cleanly segregate business rules from view presentation.",
-        "Engineered backend controllers using Java Servlets, JSP, and JDBC for dependable database interactions.",
-        "Designed clean, responsive catalog frontend using HTML5, CSS, JavaScript, and Bootstrap.",
-        "Deployed on Apache Tomcat server with MySQL relational backend."
+        "Implemented Spring Boot and Hibernate transactional backend.",
+        "Built responsive client interface with Thymeleaf, Bootstrap, and AJAX updates.",
+        "Optimized relational schema and query execution times in MySQL."
       ],
-      techStack: ["Java Servlets", "JSP", "JDBC", "MySQL", "MVC Pattern", "Apache Tomcat", "Bootstrap"],
-      links: {
-        demo: "#",
-        github: "https://github.com"
-      }
-    },
-    {
-      title: "Reference Center Management System",
-      type: "Digital Library Hub Project",
-      institution: "Academic Portfolio",
-      role: "Software Developer",
-      badge: "Automation System",
-      featured: false,
-      summary: "Comprehensive digital library management portal replacing traditional manual ledgers with computerized book issue, return, search, and inventory tracking.",
-      highlights: [
-        "Digitized repository workflows, tracking thousands of book records, membership tiers, and overdue fines.",
-        "Developed full backend with Java EE (Servlets & JSP) connected via JDBC to MySQL.",
-        "Designed intuitive dashboard for librarians and readers with instant search and status badges."
-      ],
-      techStack: ["Java EE", "Servlets", "JSP", "JDBC", "MySQL", "HTML5", "CSS", "Eclipse"],
+      techStack: ["Java", "Spring Boot", "JPA", "MySQL", "Thymeleaf", "Bootstrap"],
       links: {
         demo: "#",
         github: "https://github.com"
@@ -167,46 +257,58 @@ const RESUME_DATA = {
     }
   ],
 
-  // Awards Section specifically spotlighting Bravo awards from LinkedIn & organization
   awards: [
     {
-      id: "bravo-excellence",
-      title: "Bravo Excellence Award — Technical Delivery",
-      issuer: "Blucor Systems / LinkedIn Recognition",
-      date: "Excellence Honors",
+      id: "bravo-persistent-1",
+      title: "Bravo Award — Persistent Systems (IBM Security)",
+      issuer: "Persistent Systems & IBM Project Leadership",
+      date: "Senior Software Engineer Tenure",
       badge: "🏆 Bravo Award",
       category: "Bravo Honors",
-      citation: "“In recognition of outstanding technical dedication, swift bug resolution, and high-quality implementation of Spring Boot and JPA services for client deliverables.”",
-      reactions: { likes: 142, comments: 28, shares: 12 },
+      citation: "“Honored with the Bravo Award for exceptional dedication to IBM Security and Verify Governance, delivering critical PSIRT vulnerability fixes, swift APAR defect resolutions, and outstanding L3 PMR support under tight SLAs.”",
+      reactions: { likes: 168, comments: 34, shares: 14 },
       verified: true,
-      details: "Awarded for exceptional commitment to delivery timelines, engineering excellence, and maintaining flawless uptime on core customer-facing applications.",
+      details: "Recognized at Persistent Systems for maintaining flawless release stability on the IBM Security and Verify Governance (ISVG/IGIVA) product and driving critical fixpacks for global clients.",
       icon: "award"
     },
     {
-      id: "bravo-spot",
-      title: "Bravo Spot Recognition — Critical Problem Solver",
-      issuer: "Engineering Leadership",
-      date: "Spotlight Accolade",
-      badge: "⚡ Spot Bravo",
+      id: "bravo-persistent-2",
+      title: "Bravo Award — Delivery & Engineering Excellence",
+      issuer: "Persistent Systems",
+      date: "Software Engineer Tenure",
+      badge: "🏆 Bravo Award",
       category: "Bravo Honors",
-      citation: "“Honored with the Bravo Spot Award for diagnosing and rectifying critical production performance bottlenecks and optimizing database queries under tight client deadlines.”",
-      reactions: { likes: 118, comments: 19, shares: 8 },
+      citation: "“Conferred the Bravo Award for remarkable technical agility, high-quality code enhancements in ISVG VA, and proactively mitigating product defects to ensure uninterrupted client operations.”",
+      reactions: { likes: 145, comments: 26, shares: 9 },
       verified: true,
-      details: "Commended by cross-functional leadership for relentless debugging precision, zero downtime deployment, and proactive client satisfaction.",
+      details: "Celebrated for rapid onboarding, relentless debugging precision on complex Java modules, and outstanding teamwork across the engineering lifecycle.",
       icon: "zap"
     },
     {
-      id: "bravo-teamwork",
-      title: "Bravo Team Collaboration & Agile Contributor",
-      issuer: "Agile Development Team",
-      date: "Collaboration Honors",
-      badge: "🤝 Team Bravo",
-      category: "Bravo Honors",
-      citation: "“Recognized for exemplary teamwork, active participation in sprint code reviews, knowledge sharing sessions, and mentoring peers in modern Java conventions.”",
-      reactions: { likes: 96, comments: 15, shares: 5 },
+      id: "engineering-lead-promotion",
+      title: "Engineering Leadership & 4-Tier Career Progression",
+      issuer: "Persistent Systems Leadership",
+      date: "Rapid Promotion (2021 – 2026)",
+      badge: "⭐ Leadership Milestone",
+      category: "Leadership",
+      citation: "“Advanced from Software Engineer to Senior Software Engineer, Lead Software Engineer, and Engineering Lead in recognition of sustained technical excellence and leadership across IBM Verify Identity Governance releases.”",
+      reactions: { likes: 230, comments: 48, shares: 22 },
       verified: true,
-      details: "Celebrated for fostering a collaborative engineering culture and maintaining exemplary Git commit hygiene across sprint milestones.",
-      icon: "users"
+      details: "Reflects 5+ continuous years of increasing architectural ownership, team leadership, cross-functional alignment, and product security leadership.",
+      icon: "trending-up"
+    },
+    {
+      id: "cdac-dac-distinction",
+      title: "CDAC DAC Advanced Computing Diploma",
+      issuer: "CDAC ACTS Hyderabad",
+      date: "Professional Credential",
+      badge: "📜 CDAC Credential",
+      category: "Certifications",
+      citation: "Completed premier Post Graduate Diploma in Advance Computing with high distinction project (E-Pariksha secured exam portal).",
+      reactions: { likes: 112, comments: 19, shares: 6 },
+      verified: true,
+      details: "Comprehensive specialization in distributed systems, full stack Java development, databases, algorithms, and agile methodologies.",
+      icon: "check-circle"
     },
     {
       id: "sunbeam-cert",
@@ -233,19 +335,6 @@ const RESUME_DATA = {
       verified: true,
       details: "Deep dive into enterprise Java frameworks, object-oriented principles, and database-driven software applications.",
       icon: "check-circle"
-    },
-    {
-      id: "vlsi-robotics",
-      title: "VLSI Course & Robo War Competition Winner",
-      issuer: "IGTR & Shreeyash College of Engg",
-      date: "Innovation Honors",
-      badge: "🤖 Competition",
-      category: "Hackathons",
-      citation: "Completed specialized VLSI course at Indo German Tool Room (IGTR) and participated actively in University-level 'Robotics Workshop' and 'Robo War' competitions.",
-      reactions: { likes: 78, comments: 14, shares: 4 },
-      verified: true,
-      details: "Practical application of electronics, logic design, microcontroller programming, and tactical hardware-software integration.",
-      icon: "cpu"
     }
   ],
 
@@ -289,8 +378,8 @@ const RESUME_DATA = {
     { name: "C, C++ Certification", org: "Sunbeam Institute of Pune", year: "Certified" },
     { name: "Java Certification", org: "Seven Mentor Pvt. Ltd. Pune", year: "Certified" },
     { name: "VLSI Course Certification", org: "Indo German Tool Room (IGTR)", year: "Certified" },
-    { name: "Industrial Approach in Electronics (3-Day Workshop)", org: "Shreeyash College", year: "Completed" },
-    { name: "Xilinx FPGA Design (5-Day Workshop)", org: "Shreeyash College", year: "Completed" }
+    { name: "Industrial Approach in Electronics Workshop", org: "Shreeyash College", year: "Completed" },
+    { name: "Xilinx FPGA Design Workshop", org: "Shreeyash College", year: "Completed" }
   ],
 
   languages: [
@@ -299,7 +388,7 @@ const RESUME_DATA = {
     { name: "Marathi", level: "Native / Mother Tongue" }
   ],
 
-  interests: ["Software Architecture", "Robotics & Automation", "Cricket", "Football", "Dance"]
+  interests: ["Software Architecture & IAM", "Product Security (PSIRT)", "Robotics & Automation", "Cricket", "Football", "Dance"]
 };
 
 if (typeof module !== 'undefined' && module.exports) {

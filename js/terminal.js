@@ -207,17 +207,19 @@ class DeveloperTerminal {
   }
 
   cmdExperience() {
-    let out = `<div class="text-purple-300 font-semibold mb-2">💼 Professional Experience:</div>`;
+    let out = `<div class="text-purple-300 font-semibold mb-2">💼 Professional Career Trajectory (6+ Years):</div>`;
     RESUME_DATA.experience.forEach(exp => {
       out += `
         <div class="p-2.5 my-1.5 bg-purple-950/20 border-l-4 border-purple-500 rounded-r text-xs">
-          <div class="font-bold text-purple-200 text-sm">${exp.role} @ ${exp.company}</div>
-          <div class="text-gray-400">${exp.period} | ${exp.location}</div>
-          <div class="text-cyan-300 font-semibold mt-1">Project: ${exp.project}</div>
+          <div class="font-bold text-purple-200 text-sm flex items-center justify-between">
+            <span>${exp.role} @ ${exp.company}</span>
+            <span class="text-emerald-400 font-mono text-[11px]">${exp.duration || ''}</span>
+          </div>
+          <div class="text-gray-400">${exp.period} | ${exp.location} ${exp.awardWon ? `• <span class="text-amber-400 font-semibold">${exp.awardWon}</span>` : ''}</div>
+          <div class="text-cyan-300 font-semibold mt-1">Domain / Project: ${exp.project}</div>
           <div class="text-gray-300 mt-1">${exp.description}</div>
           <ul class="list-disc list-inside mt-1.5 space-y-1 text-gray-400">
             ${exp.highlights.slice(0, 3).map(h => `<li>${h}</li>`).join('')}
-          </ul>
         </div>
       `;
     });
